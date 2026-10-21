@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Crew Member
+  - Current Node
+  - Node
   layers:
   - Default
   - TransparentFX
