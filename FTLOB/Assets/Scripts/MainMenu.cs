@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
-using UnityEngine.Assemblies;
 
 public class MainMenu : MonoBehaviour
 {
@@ -35,58 +34,60 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         // Current scene loading for continue and new game button, change later to either continue from where the player left off or start a new game
+        Time.timeScale = 1f; // Ensure the game is running when starting
         SceneManager.LoadScene("Ship");
     }
 
     public void Titlescreen()
     {
+        Time.timeScale = 1f; // Ensure the game is running when returning to title screen
         SceneManager.LoadScene("TitleScreen");
+    }
+
+    public void Tutorial()
+    {
+        Time.timeScale = 1f; // Ensure the game is running when starting tutorial
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void ToggleOptions()
     {
-        if (optionsPanel != null)
+        if (optionsPanel == null)
         {
-            bool isActive = optionsPanel.activeSelf;
-            optionsPanel.SetActive(!isActive);
+            return;
         }
+        bool open = !optionsPanel.activeSelf;
+        optionsPanel.SetActive(open);
 
-        if (pausePanel != null && optionsPanel.activeSelf)
+        if (open && pausePanel != null)
         {
             pausePanel.SetActive(false); // Close pause menu when opening options
         }
-
-        // Resume the game if options are closed
-        if (!optionsPanel.activeSelf)
-        {
-            Time.timeScale = 1f; // Resume the game
-        }
-        else
-        {
-            Time.timeScale = 0f; // Pause the game when options are open
-        }
+        Time.timeScale = open ? 0f : 1f; // Pause or resume the game based on options panel state
     }
 
     public void TogglePause()
     {
-        if (pausePanel != null)
+        if (pausePanel == null)
         {
-            Debug.Log("Toggling pause menu");
-            bool isActive = pausePanel.activeSelf;
-            Time.timeScale = isActive ? 1f : 0f; // Resume or pause the game
-            if (optionsPanel == isActive)
-            {
-                pausePanel.SetActive(!isActive); // Close pause menu when opening options
-            }
-            else
-            {
-                pausePanel.SetActive(!isActive); // Toggle pause menu
-            }
+            return;
         }
+
+        // Don't toggle pause menu if options panel is open
+        if (optionsPanel != null && optionsPanel.activeSelf)
+        {
+            return;
+        }
+
+        bool open = !pausePanel.activeSelf;
+        pausePanel.SetActive(open);
+        Time.timeScale = open ? 0f : 1f; // Pause or resume the game based on pause panel state
+        Debug.Log(open ? "Game Paused" : "Game Resumed");
     }
 
     public void Credits()
     {
+        Time.timeScale = 1f; // Ensure the game is running when showing credits
         SceneManager.LoadScene("Credits");
     }
 
@@ -94,9 +95,9 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Quit Game");
         Application.Quit();
-#if UNITY_EDITOR
+        #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
-#endif
+        #endif
     }
 
 }

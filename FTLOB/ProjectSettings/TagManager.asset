@@ -5,14 +5,16 @@ TagManager:
   serializedVersion: 3
   tags:
   - Crew Member
+  - Current Node
+  - Node
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Crew
   - Water
   - UI
-  - 
+  - Wall
   - 
   - 
   - 

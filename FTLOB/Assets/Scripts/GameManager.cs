@@ -1,16 +1,12 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void BeaconMap()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // Load the Beacon Map scene
+        // !!(later add condition to check if ship has enough fuel to jump)
+        SceneManager.LoadScene("NodeNav");
     }
 }
