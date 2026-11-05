@@ -8,6 +8,11 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private InputActionReference togglePauseAction;
 
+    [SerializeField] private string startScene = "Ship";
+    [SerializeField] private string titleScene = "TitleScreen";
+    [SerializeField] private string tutorialScene = "Tutorial";
+    [SerializeField] private string creditsScene = "Credits";
+
     private void OnEnable()
     {
         if (togglePauseAction != null)
@@ -35,19 +40,19 @@ public class MainMenu : MonoBehaviour
     {
         // Current scene loading for continue and new game button, change later to either continue from where the player left off or start a new game
         Time.timeScale = 1f; // Ensure the game is running when starting
-        SceneManager.LoadScene("Ship");
+        SceneManager.LoadScene(startScene);
     }
 
     public void Titlescreen()
     {
         Time.timeScale = 1f; // Ensure the game is running when returning to title screen
-        SceneManager.LoadScene("TitleScreen");
+        SceneManager.LoadScene(titleScene);
     }
 
     public void Tutorial()
     {
         Time.timeScale = 1f; // Ensure the game is running when starting tutorial
-        SceneManager.LoadScene("Tutorial");
+        SceneManager.LoadScene(tutorialScene);
     }
 
     public void ToggleOptions()
@@ -88,7 +93,7 @@ public class MainMenu : MonoBehaviour
     public void Credits()
     {
         Time.timeScale = 1f; // Ensure the game is running when showing credits
-        SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene(creditsScene);
     }
 
     public void Quit()

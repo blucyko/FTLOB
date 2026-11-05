@@ -1893,6 +1893,10 @@ MonoBehaviour:
   optionsPanel: {fileID: 625379409}
   pausePanel: {fileID: 278375748}
   togglePauseAction: {fileID: 3533459928172052633, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  startScene: Ship
+  titleScene: TitleScreen
+  tutorialScene: Tutorial
+  creditsScene: Credits
 --- !u!1 &1019766944
 GameObject:
   m_ObjectHideFlags: 0
