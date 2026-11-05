@@ -84,22 +84,25 @@ public class PauseManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        return;
     }
 
     public void OptionsButton()
     {
-        return;
+        
     }
 
     public void ControlsButton()
     {
-        return;
+        
     }
 
     public void ExitButton()
     {
-        return;
+        Debug.Log("Quit Game");
+        Application.Quit();
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #endif
     }
 
 }
