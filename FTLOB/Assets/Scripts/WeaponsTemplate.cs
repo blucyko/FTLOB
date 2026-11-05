@@ -15,6 +15,8 @@ public class WeaponsTemplate : SystemsTemplate
 
     [SerializeField]protected float barrelSpeed = 0.5f;
 
+    protected bool isReady = false;
+
     private Camera cam;
 
     void Start()
@@ -38,6 +40,16 @@ public class WeaponsTemplate : SystemsTemplate
         {
             SetCurrentRecharge(currentRecharge + Time.deltaTime * crewMod);
         }
+        if(currentRecharge >= maxRange)
+        {
+            WeaponReady();
+        }
+    }
+
+    protected void WeaponReady()
+    {
+        isReady = true;
+        Debug.Log("Weapon is Ready!");
     }
 
     protected void Attack()
@@ -54,6 +66,15 @@ public class WeaponsTemplate : SystemsTemplate
     public float GetCurrentRecharge()
     {
         return currentRecharge;
+    }
+
+    public void ToggleIsReady()
+    {
+        isReady = !isReady;
+    }
+    public bool GetIsReady()
+    {
+        return isReady;
     }
 
     protected void BarrelLookAtMouse()
