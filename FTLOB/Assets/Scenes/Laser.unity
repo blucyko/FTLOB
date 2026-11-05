@@ -663,11 +663,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62be758715f68014889872ec60173c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Laser
-  pluggedCrew: 0
+  pluggedCrew: 1
   pluggedSCP: 0
   barrel: {fileID: 367143404}
   projectile: {fileID: 0}
-  maxRecharge: 0
+  maxRecharge: 20
   currentRecharge: 0
   barrelSpeed: 0.5
 --- !u!1 &1506686149
