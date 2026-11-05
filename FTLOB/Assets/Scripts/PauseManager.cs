@@ -10,39 +10,41 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private InputActionReference togglePauseAction;
 
+    // [SerializeField] private string currentScene;
     [SerializeField] private string MenuScene = "TitleScreen";
 
     private bool pauseActive;
 
-    private void OnEnable()
-    {
-        if (togglePauseAction != null)
-        {
-            togglePauseAction.action.performed += TogglePause;
-            togglePauseAction.action.Enable();
-        }
-    }
-
-    private void OnDisable()
-    {
-        if (togglePauseAction != null)
-        {
-            togglePauseAction.action.performed -= TogglePause;
-            togglePauseAction.action.Disable();
-        }
-    }
-
-    // void Start()
+    // private void OnEnable()
     // {
     //     if (togglePauseAction != null)
     //     {
-    //         // links the TogglePause function to the togglePauseAction InputActionReference, 
-    //         // so that when the button for it is pressed it calls togglePauseAction
-    //         togglePauseAction.action.performed += TogglePause; 
+    //         togglePauseAction.action.performed += TogglePause;
     //         togglePauseAction.action.Enable();
     //     }
-    //     pauseActive = pausePanel.activeSelf;
     // }
+
+    // private void OnDisable()
+    // {
+    //     if (togglePauseAction != null)
+    //     {
+    //         togglePauseAction.action.performed -= TogglePause;
+    //         togglePauseAction.action.Disable();
+    //     }
+    // }
+
+    void Start()
+    {
+        if (togglePauseAction != null)
+        {
+            // links the TogglePause function to the togglePauseAction InputActionReference, 
+            // so that when the button for it is pressed it calls togglePauseAction
+            togglePauseAction.action.performed += TogglePause; 
+            togglePauseAction.action.Enable();
+        }
+        pausePanel.SetActive(false);
+        pauseActive = pausePanel.activeSelf;
+    }
 
 
 
@@ -80,6 +82,8 @@ public class PauseManager : MonoBehaviour
 
     public void RestartButton()
     {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         return;
     }
 
