@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class PauseManager : MonoBehaviour
@@ -8,6 +9,10 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private GameObject optionsPanel;
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private InputActionReference togglePauseAction;
+
+    [SerializeField] private string MenuScene = "TitleScreen";
+
+    private bool pauseActive;
 
     // private void OnEnable()
     // {
@@ -36,6 +41,7 @@ public class PauseManager : MonoBehaviour
             togglePauseAction.action.performed += TogglePause; 
             togglePauseAction.action.Enable();
         }
+        pauseActive = pausePanel.activeSelf;
     }
 
     // private void OnTogglePause(InputAction.CallbackContext context)
@@ -62,15 +68,17 @@ public class PauseManager : MonoBehaviour
             return;
         }
 
-        bool open = !pausePanel.activeSelf;
-        pausePanel.SetActive(open);
-        Time.timeScale = open ? 0f : 1f; // Pause or resume the game based on pause panel state
-        Debug.Log(open ? "Game Paused" : "Game Resumed");
+        pauseActive = !pauseActive;
+        Debug.Log("Is pause panel active? " + pauseActive);
+        pausePanel.SetActive(pauseActive);
+        Time.timeScale = pauseActive ? 0f : 1f; // Pause or resume the game based on pause panel state
+        Debug.Log(pauseActive ? "Game Paused" : "Game Resumed");
     }
 
     public void MainMenuButton()
-    {
-        return;
+    {   
+        Time.timeScale = 1f; // Ensure the game is running when returning to title screen
+        SceneManager.LoadScene(MenuScene);
     }
 
     public void RestartButton()
