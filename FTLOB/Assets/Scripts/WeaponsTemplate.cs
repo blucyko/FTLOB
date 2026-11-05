@@ -40,10 +40,10 @@ public class WeaponsTemplate : SystemsTemplate
         {
             SetCurrentRecharge(currentRecharge + Time.deltaTime * crewMod);
         }
-        if(currentRecharge >= maxRange)
+        if(currentRecharge >= maxRecharge)
         {
             SetIsReady(true);
-            // Debug.Log("Weapon is ready!");
+            Debug.Log("Weapon is ready!");
         }
     }
 
