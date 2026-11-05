@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 401925184}
   - component: {fileID: 401925183}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: laser radius
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -667,6 +667,8 @@ MonoBehaviour:
   pluggedSCP: 0
   barrel: {fileID: 367143404}
   projectile: {fileID: 0}
+  weaponRadius: {fileID: 401925182}
+  maxRange: 5
   maxRecharge: 20
   currentRecharge: 0
   barrelSpeed: 0.5

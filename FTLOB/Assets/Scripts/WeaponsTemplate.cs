@@ -5,11 +5,13 @@ using UnityEngine.InputSystem;
 public class WeaponsTemplate : SystemsTemplate
 {
     protected bool isSelected = false;
-    public GameObject barrel;
-    public GameObject projectile;
+    [SerializeField] protected GameObject barrel;
+    [SerializeField] protected GameObject projectile;
+    [SerializeField] protected Transform weaponRadius;
+    [SerializeField] protected float maxRange = 20f;
     
-    [SerializeField]protected float maxRecharge = 20;
-    [SerializeField]protected float currentRecharge = 0;
+    [SerializeField]protected float maxRecharge = 20f;
+    [SerializeField]protected float currentRecharge = 0f;
 
     [SerializeField]protected float barrelSpeed = 0.5f;
 
@@ -20,6 +22,8 @@ public class WeaponsTemplate : SystemsTemplate
         cam = Camera.main;
         SetPreferredCrew(1);
         SetCrew(pluggedCrew);
+
+        weaponRadius.localScale = new Vector3(maxRange, maxRange, 0f);
     }
 
     void Update()
