@@ -8,8 +8,8 @@ public class WeaponsTemplate : SystemsTemplate
     public GameObject barrel;
     public GameObject projectile;
     
-    [SerializeField]protected float maxRecharge;
-    [SerializeField]protected float currentRecharge;
+    [SerializeField]protected float maxRecharge = 20;
+    [SerializeField]protected float currentRecharge = 0;
 
     [SerializeField]protected float barrelSpeed = 0.5f;
 
@@ -19,13 +19,27 @@ public class WeaponsTemplate : SystemsTemplate
     {
         cam = Camera.main;
         SetPreferredCrew(1);
+        SetCrew(pluggedCrew);
     }
 
     void Update()
     {
         BarrelLookAtMouse();
-        
-        Debug.Log("looking at mouse");
+        UpdateRecharge();
+    }
+
+    protected void UpdateRecharge()
+    {
+        if(currentRecharge < maxRecharge)
+        {
+            SetCurrentRecharge(currentRecharge + Time.deltaTime * crewMod);
+        }
+    }
+
+    protected void Attack()
+    {
+        // Debug.Log("FIRE!!!");
+        SetCurrentRecharge(0);
     }
 
     public void SetCurrentRecharge(float newRecharge)
@@ -38,18 +52,21 @@ public class WeaponsTemplate : SystemsTemplate
         return currentRecharge;
     }
 
-    public void BarrelLookAtMouse()
+    protected void BarrelLookAtMouse()
     {
+        // mouse position calculation
         Vector3 mousePos = Mouse.current.position.ReadValue();
         mousePos.z = Mathf.Abs(cam.transform.position.z - barrel.transform.position.z);
         mousePos = cam.ScreenToWorldPoint(mousePos);
+
+        // determining required angle to look at mouse
         Vector2 dir = mousePos - barrel.transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        // barrel.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        // barrel.transform.rotation = Quaternion.Euler(0f, 0f, angle); // desired final rotation
 
         
         barrel.transform.rotation = Quaternion.Slerp(barrel.transform.rotation, 
-            Quaternion.AngleAxis(angle, Vector3.forward), Time.deltaTime * barrelSpeed);
+            Quaternion.AngleAxis(angle, Vector3.forward), Time.deltaTime * barrelSpeed); // rotation accounting for speed
     }
 
     

@@ -47,7 +47,7 @@ public class SystemsTemplate : MonoBehaviour
     // the currently plugged crew member and anomaly, set to the indicies of the respective lists
     [SerializeField] protected int pluggedCrew, pluggedSCP;
     protected int preferredCrew; // index of the preferred crew member within crewList
-    protected float crewMod;
+    protected float crewMod = crewModList[2];
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
