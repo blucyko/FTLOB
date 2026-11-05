@@ -10,16 +10,16 @@ public class WeaponsTemplate : SystemsTemplate
     [SerializeField] protected Transform weaponRadius;
     [SerializeField] protected float maxRange = 20f;
     
-    [SerializeField]protected float maxRecharge = 20f;
-    [SerializeField]protected float currentRecharge = 0f;
+    [SerializeField] protected float maxRecharge = 20f;
+    [SerializeField] protected float currentRecharge = 0f;
 
-    [SerializeField]protected float barrelSpeed = 0.5f;
+    [SerializeField] protected float barrelSpeed = 0.5f;
 
     protected bool isReady = false;
 
     private Camera cam;
 
-    void Start()
+    protected void Start()
     {
         cam = Camera.main;
         SetPreferredCrew(1);
@@ -28,7 +28,7 @@ public class WeaponsTemplate : SystemsTemplate
         weaponRadius.localScale = new Vector3(maxRange, maxRange, 0f);
     }
 
-    void Update()
+    protected void Update()
     {
         BarrelLookAtMouse();
         UpdateRecharge();
@@ -42,20 +42,17 @@ public class WeaponsTemplate : SystemsTemplate
         }
         if(currentRecharge >= maxRange)
         {
-            WeaponReady();
+            SetIsReady(true);
+            // Debug.Log("Weapon is ready!");
         }
     }
 
-    protected void WeaponReady()
-    {
-        isReady = true;
-        Debug.Log("Weapon is Ready!");
-    }
 
     protected void Attack()
     {
         // Debug.Log("FIRE!!!");
         SetCurrentRecharge(0);
+        SetIsReady(false);
     }
 
     public void SetCurrentRecharge(float newRecharge)
@@ -68,9 +65,9 @@ public class WeaponsTemplate : SystemsTemplate
         return currentRecharge;
     }
 
-    public void ToggleIsReady()
+    public void SetIsReady(bool newIsReady)
     {
-        isReady = !isReady;
+        isReady = newIsReady;
     }
     public bool GetIsReady()
     {

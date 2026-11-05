@@ -1,10 +1,24 @@
 using UnityEngine;
+using System.Collections;
 
 public class Laser : WeaponsTemplate
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
+    [SerializeField] private int bulletNum;
+    [SerializeField] private float bulletDelay;
+    [SerializeField] private float bulletSpeed;
 
     // Update is called once per frame
-
+    public IEnumerator Attack()
+    {
+        Debug.Log("FIRIN MA LAYSA!!!");
+        for(int i = 0; i < bulletNum; i++)
+        {
+            //TODO: instantiate laser
+            Debug.Log("fired 1 laser!");
+            yield return new WaitForSeconds(bulletDelay);
+        }
+        base.Attack();
+    }
 }
