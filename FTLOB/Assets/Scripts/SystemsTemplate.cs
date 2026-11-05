@@ -19,7 +19,7 @@ public class SystemsTemplate : MonoBehaviour
 
     // list of modifiers based on what crew member is currently manning the system:
     // index 0 = 25% for no crew, index 1 = 50% for wrong crew, index 2 = 100% for correct crew
-    [SerializeField] private List<float> crewModList = new List<float>{0.25f, 0.5f, 1.0f};
+    private static List<float> crewModList = new List<float>{0.25f, 0.5f, 1.0f};
 
 
     [SerializeField] private string pluggedCrew = "", pluggedSCP = "none";
@@ -38,14 +38,16 @@ public class SystemsTemplate : MonoBehaviour
         if(!crewList.Contains(pluggedCrew))
         {
             crewMod = crewModList[0];
-            return;
         }
-        if(pluggedCrew.Equals(preferredCrew))
+        else if(pluggedCrew.Equals(preferredCrew))
         {
             crewMod = crewModList[2];
-            return;
         }
-        crewMod = crewModList[1];
+        else
+        {
+            crewMod = crewModList[1];
+        }
+        Debug.Log("current crewMod is: " + crewMod);
     }
 
     public void SetSCP(string newSCP)
