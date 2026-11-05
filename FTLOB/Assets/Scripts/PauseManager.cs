@@ -14,40 +14,37 @@ public class PauseManager : MonoBehaviour
 
     private bool pauseActive;
 
-    // private void OnEnable()
-    // {
-    //     if (togglePauseAction != null)
-    //     {
-    //         togglePauseAction.action.performed += TogglePause;
-    //         togglePauseAction.action.Enable();
-    //     }
-    // }
-
-    // private void OnDisable()
-    // {
-    //     if (togglePauseAction != null)
-    //     {
-    //         togglePauseAction.action.performed -= TogglePause;
-    //         togglePauseAction.action.Disable();
-    //     }
-    // }
-
-    void Start()
+    private void OnEnable()
     {
         if (togglePauseAction != null)
         {
-            // links the TogglePause function to the togglePauseAction InputActionReference, 
-            // so that when the button for it is pressed it calls togglePauseAction
-            togglePauseAction.action.performed += TogglePause; 
+            togglePauseAction.action.performed += TogglePause;
             togglePauseAction.action.Enable();
         }
-        pauseActive = pausePanel.activeSelf;
     }
 
-    // private void OnTogglePause(InputAction.CallbackContext context)
+    private void OnDisable()
+    {
+        if (togglePauseAction != null)
+        {
+            togglePauseAction.action.performed -= TogglePause;
+            togglePauseAction.action.Disable();
+        }
+    }
+
+    // void Start()
     // {
-    //     TogglePause();
+    //     if (togglePauseAction != null)
+    //     {
+    //         // links the TogglePause function to the togglePauseAction InputActionReference, 
+    //         // so that when the button for it is pressed it calls togglePauseAction
+    //         togglePauseAction.action.performed += TogglePause; 
+    //         togglePauseAction.action.Enable();
+    //     }
+    //     pauseActive = pausePanel.activeSelf;
     // }
+
+
 
 
     public void TogglePause(InputAction.CallbackContext context)
