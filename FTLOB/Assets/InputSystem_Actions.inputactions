@@ -1045,6 +1045,16 @@
                     "interactions": "",
                     "initialStateCheck": false,
                     "priority": 0
+                },
+                {
+                    "name": "R-click",
+                    "type": "Button",
+                    "id": "aafd2064-ca13-43bb-9db7-9799086e7afb",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
                 }
             ],
             "bindings": [
@@ -1056,6 +1066,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "L-click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3a0e9a35-4870-41ca-8e39-f4bb03adeb8a",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "R-click",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

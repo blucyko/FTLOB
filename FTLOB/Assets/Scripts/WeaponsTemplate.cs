@@ -1,16 +1,17 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class WeaponsTemplate : SystemsTemplate
 {
     [SerializeField] protected bool isSelected = false;
-    [SerializeField] protected InputActionReference selectAction;
-    [SerializeField] protected InputActionReference pointAction;
+    [SerializeField] protected InputActionReference fireAction;
 
     [SerializeField] protected GameObject barrel;
     [SerializeField] protected GameObject projectile;
     [SerializeField] protected Transform weaponRadius;
+    [SerializeField] protected Transform projectileSpawn;
     [SerializeField] protected float maxRange = 20f;
     
     [SerializeField] protected float maxRecharge = 20f;
@@ -19,6 +20,7 @@ public class WeaponsTemplate : SystemsTemplate
     [SerializeField] protected float barrelSpeed = 0.5f;
 
     [SerializeField] protected bool isRotLocked = false;
+    protected Vector3 lastMousePos;
 
     protected bool isReady = false;
 
@@ -29,16 +31,23 @@ public class WeaponsTemplate : SystemsTemplate
         cam = Camera.main;
         SetPreferredCrew(1);
         SetCrew(pluggedCrew);
+        isSelected = false;
 
         weaponRadius.localScale = new Vector3(maxRange, maxRange, 0f);
 
-        selectAction.action.performed += OnClick;
-        selectAction.action.Enable();
+        // fireAction.action.performed += OnClick;
+        // fireAction.action.Enable();
+        // lastMousePos = transform.position + Vector3.right;
     }
 
     protected void Update()
     {
-        BarrelLookAtMouse();
+        // BarrelLookAtMouse();
+        if(!isRotLocked)
+        {
+            // BarrelLook(lastMousePos);
+            BarrelLookAtMouse();
+        }
         UpdateRecharge();
     }
 
@@ -113,25 +122,49 @@ public class WeaponsTemplate : SystemsTemplate
 
     }
 
-    void OnClick(InputAction.CallbackContext context)
-    {
-        if(!context.started)
-        {
-            Debug.Log("couldn't find context!");
-            return;
-        }
+    // void OnClick(InputAction.CallbackContext context)
+    // {
+    //     if(!context.started)
+    //     {
+    //         Debug.Log("couldn't find context!");
+    //         return;
+    //     }
 
-        var rayHit = Physics2D.GetRayIntersection(cam.ScreenPointToRay(Mouse.current.position.ReadValue()));
-        if(!rayHit.collider)
-        {
-            Debug.Log("didn't hit!");
-        }
+    //     var rayHit = Physics2D.GetRayIntersection(cam.ScreenPointToRay(Mouse.current.position.ReadValue()));
+    //     if(!rayHit.collider)
+    //     {
+    //         Debug.Log("didn't hit!");
+    //     }
 
-        Debug.Log("Hit something: " + rayHit.collider.gameObject.name);
-    }
+    //     Debug.Log("Hit something: " + rayHit.collider.gameObject.name);
+    // }
 
     public void SetIsRotLocked(bool newLock)
     {
         isRotLocked = newLock;
     }
+
+    public void SetLastMousePos(Vector3 newMousePos)
+    {
+        lastMousePos = newMousePos;
+    }
+
+    // void OnClick(InputAction.CallbackContext context)
+    // {
+    //     if(isSelected)
+    //     {
+    //         // mouse position calculation
+    //         Vector3 mousePos = Mouse.current.position.ReadValue();
+    //         mousePos.z = Mathf.Abs(cam.transform.position.z - barrel.transform.position.z);
+    //         mousePos = cam.ScreenToWorldPoint(mousePos);
+            
+    //         SetLastMousePos(mousePos);
+    //     }
+    // }
+
+    public void ToggleIsSelected()
+    {
+        isSelected = !isSelected;
+    }
+    
 }

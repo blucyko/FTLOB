@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.InputSystem;
 
 public class Laser : WeaponsTemplate
 {
@@ -12,6 +13,14 @@ public class Laser : WeaponsTemplate
     [SerializeField] private float bulletSpread;
 
     // Update is called once per frame
+
+    private void Awake()
+    {
+        base.Awake();
+        
+        fireAction.action.performed += OnClick;
+        fireAction.action.Enable();
+    }
     public void FireLaser()
     {
         StartCoroutine(Attack());
@@ -26,8 +35,8 @@ public class Laser : WeaponsTemplate
             {
                 //TODO: instantiate laser
                 Debug.Log("fired 1 laser!");
-            GameObject newBullet = Instantiate(bullet, weaponRadius.position, weaponRadius.rotation);
-            newBullet.transform.rotation = Quaternion.Euler(0, 0, Random.Range(-1 * bulletSpread, bulletSpread));
+            GameObject newBullet = Instantiate(bullet, projectileSpawn.position, projectileSpawn.rotation);
+            newBullet.transform.Rotate(new Vector3(0, 0, Random.Range(-1 * bulletSpread, bulletSpread)));
             newBullet.GetComponent<LaserBullet>().SetBulletSpeed(bulletSpeed);
             GameObject newRadius = Instantiate(weaponRadius.gameObject, weaponRadius.position, weaponRadius.rotation);
             // newRadius.GetComponent<SpriteRenderer>().enabled = false;
@@ -39,10 +48,22 @@ public class Laser : WeaponsTemplate
             }
             base.Attack();
             SetIsRotLocked(false);
+            ToggleIsSelected();
         }
         else
         {
             Debug.Log("laser isn't ready yet!");
         }
+    }
+
+    void OnClick(InputAction.CallbackContext context)
+    {
+        if(isSelected)
+        {
+            // fire the thing!
+            Debug.Log("trigger fire");
+            FireLaser();
+        }
+        
     }
 }
