@@ -4,7 +4,10 @@ using UnityEngine.InputSystem;
 
 public class WeaponsTemplate : SystemsTemplate
 {
-    protected bool isSelected = false;
+    [SerializeField] protected bool isSelected = false;
+    [SerializeField] protected InputActionReference selectAction;
+    [SerializeField] protected InputActionReference pointAction;
+
     [SerializeField] protected GameObject barrel;
     [SerializeField] protected GameObject projectile;
     [SerializeField] protected Transform weaponRadius;
@@ -76,20 +79,27 @@ public class WeaponsTemplate : SystemsTemplate
 
     protected void BarrelLookAtMouse()
     {
-        // mouse position calculation
-        Vector3 mousePos = Mouse.current.position.ReadValue();
-        mousePos.z = Mathf.Abs(cam.transform.position.z - barrel.transform.position.z);
-        mousePos = cam.ScreenToWorldPoint(mousePos);
+        if(isSelected)
+        {
+            // mouse position calculation
+            Vector3 mousePos = Mouse.current.position.ReadValue();
+            mousePos.z = Mathf.Abs(cam.transform.position.z - barrel.transform.position.z);
+            mousePos = cam.ScreenToWorldPoint(mousePos);
 
+            BarrelLook(mousePos);
+        }
+    }
+
+    protected void BarrelLook(Vector3 target)
+    {
         // determining required angle to look at mouse
-        Vector2 dir = mousePos - barrel.transform.position;
+        Vector2 dir = target - barrel.transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         // barrel.transform.rotation = Quaternion.Euler(0f, 0f, angle); // desired final rotation
 
         
         barrel.transform.rotation = Quaternion.Slerp(barrel.transform.rotation, 
             Quaternion.AngleAxis(angle, Vector3.forward), Time.deltaTime * barrelSpeed); // rotation accounting for speed
-    }
 
-    
+    }
 }
