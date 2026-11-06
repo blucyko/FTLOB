@@ -365,7 +365,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 401925182}
+  - {fileID: 662945313}
   m_Father: {fileID: 1506686150}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &367143406
@@ -455,12 +455,11 @@ Transform:
   m_GameObject: {fileID: 401925181}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.67, y: -0.125, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 0}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 955871469}
-  m_Father: {fileID: 367143405}
+  m_Children: []
+  m_Father: {fileID: 662945313}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &401925183
 CircleCollider2D:
@@ -558,6 +557,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!1 &662945312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 662945313}
+  m_Layer: 0
+  m_Name: barrel tip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &662945313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662945312}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.67, y: -0.125, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 401925182}
+  - {fileID: 955871469}
+  m_Father: {fileID: 367143405}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &955871468
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,10 +618,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.1, z: 0}
+  m_LocalScale: {x: 5, y: 0.5, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 401925182}
+  m_Father: {fileID: 662945313}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &955871470
 PolygonCollider2D:
@@ -1247,6 +1279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LaserBullet
   bulletSpeed: 0
+  bulletRadius: {fileID: 0}
 --- !u!58 &1415128039
 CircleCollider2D:
   m_ObjectHideFlags: 0

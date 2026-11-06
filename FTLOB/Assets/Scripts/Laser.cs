@@ -26,6 +26,11 @@ public class Laser : WeaponsTemplate
                 Debug.Log("fired 1 laser!");
             GameObject newBullet = Instantiate(bullet, weaponRadius.position, weaponRadius.rotation);
             newBullet.GetComponent<LaserBullet>().SetBulletSpeed(bulletSpeed);
+            GameObject newRadius = Instantiate(weaponRadius.gameObject, weaponRadius.position, weaponRadius.rotation);
+            // newRadius.GetComponent<SpriteRenderer>().enabled = false;
+            newRadius.GetComponent<SpriteRenderer>().color = Color.black;
+            newRadius.SetActive(true);
+            newBullet.GetComponent<LaserBullet>().SetBulletRadius(newRadius);
             newBullet.SetActive(true);
                 yield return new WaitForSeconds(bulletDelay);
             }
