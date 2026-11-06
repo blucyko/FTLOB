@@ -9,6 +9,7 @@ public class Laser : WeaponsTemplate
     [SerializeField] private float bulletDelay;
     [SerializeField] private float bulletSpeed;
     [SerializeField] private GameObject bullet;
+    [SerializeField] private float bulletSpread;
 
     // Update is called once per frame
     public void FireLaser()
@@ -19,12 +20,14 @@ public class Laser : WeaponsTemplate
     {
         if(isReady)
         {
+            SetIsRotLocked(true);
             Debug.Log("FIRIN MA LAYSA!!!");
             for(int i = 0; i < bulletNum; i++)
             {
                 //TODO: instantiate laser
                 Debug.Log("fired 1 laser!");
             GameObject newBullet = Instantiate(bullet, weaponRadius.position, weaponRadius.rotation);
+            newBullet.transform.rotation = Quaternion.Euler(0, 0, Random.Range(-1 * bulletSpread, bulletSpread));
             newBullet.GetComponent<LaserBullet>().SetBulletSpeed(bulletSpeed);
             GameObject newRadius = Instantiate(weaponRadius.gameObject, weaponRadius.position, weaponRadius.rotation);
             // newRadius.GetComponent<SpriteRenderer>().enabled = false;
@@ -35,6 +38,7 @@ public class Laser : WeaponsTemplate
                 yield return new WaitForSeconds(bulletDelay);
             }
             base.Attack();
+            SetIsRotLocked(false);
         }
         else
         {

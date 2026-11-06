@@ -30,7 +30,7 @@
                     "name": "Attack",
                     "type": "Button",
                     "id": "6c2ab1b8-8984-453a-af3d-a3c78ae1679a",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false,
@@ -1027,6 +1027,35 @@
                     "processors": "",
                     "groups": "",
                     "action": "Toggle Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Ship",
+            "id": "b37b38c3-0bd3-4ae2-8b4a-f1201c638b95",
+            "actions": [
+                {
+                    "name": "L-click",
+                    "type": "Button",
+                    "id": "32d1a3a6-bc30-4f2d-8697-22fc07203f6a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c17c1c24-4f0c-4389-adf2-1537c6b7d0bb",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "L-click",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

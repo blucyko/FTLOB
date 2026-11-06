@@ -557,6 +557,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!1 &634944137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 634944139}
+  - component: {fileID: 634944138}
+  m_Layer: 0
+  m_Name: InputManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &634944138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634944137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b186b0f38d9a72c47aaf0c0e6669433e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InputManager
+--- !u!4 &634944139
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 634944137}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.59207, y: 0, z: -1.95925}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &662945312
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,20 +965,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Laser
   pluggedCrew: 1
   pluggedSCP: 0
-  isSelected: 0
-  selectAction: {fileID: 0}
+  isSelected: 1
+  selectAction: {fileID: 5698148703921371635, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   pointAction: {fileID: 0}
   barrel: {fileID: 367143404}
   projectile: {fileID: 1415128035}
   weaponRadius: {fileID: 401925182}
   maxRange: 5
-  maxRecharge: 20
+  maxRecharge: 10
   currentRecharge: 0
   barrelSpeed: 0.5
-  bulletNum: 3
-  bulletDelay: 0.5
+  isRotLocked: 0
+  bulletNum: 10
+  bulletDelay: 0.1
   bulletSpeed: 5
   bullet: {fileID: 1415128035}
+  bulletSpread: 50
 --- !u!61 &982069883
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1695,3 +1741,4 @@ SceneRoots:
   - {fileID: 1415128037}
   - {fileID: 1263862339}
   - {fileID: 205609521}
+  - {fileID: 634944139}

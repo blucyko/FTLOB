@@ -18,17 +18,22 @@ public class WeaponsTemplate : SystemsTemplate
 
     [SerializeField] protected float barrelSpeed = 0.5f;
 
+    [SerializeField] protected bool isRotLocked = false;
+
     protected bool isReady = false;
 
     private Camera cam;
 
-    protected void Start()
+    protected void Awake()
     {
         cam = Camera.main;
         SetPreferredCrew(1);
         SetCrew(pluggedCrew);
 
         weaponRadius.localScale = new Vector3(maxRange, maxRange, 0f);
+
+        selectAction.action.performed += OnClick;
+        selectAction.action.Enable();
     }
 
     protected void Update()
@@ -92,6 +97,11 @@ public class WeaponsTemplate : SystemsTemplate
 
     protected void BarrelLook(Vector3 target)
     {
+        if (isRotLocked)
+        {
+            Debug.Log("weapon locked!");
+            return;
+        }
         // determining required angle to look at mouse
         Vector2 dir = target - barrel.transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
@@ -101,5 +111,27 @@ public class WeaponsTemplate : SystemsTemplate
         barrel.transform.rotation = Quaternion.Slerp(barrel.transform.rotation, 
             Quaternion.AngleAxis(angle, Vector3.forward), Time.deltaTime * barrelSpeed); // rotation accounting for speed
 
+    }
+
+    void OnClick(InputAction.CallbackContext context)
+    {
+        if(!context.started)
+        {
+            Debug.Log("couldn't find context!");
+            return;
+        }
+
+        var rayHit = Physics2D.GetRayIntersection(cam.ScreenPointToRay(Mouse.current.position.ReadValue()));
+        if(!rayHit.collider)
+        {
+            Debug.Log("didn't hit!");
+        }
+
+        Debug.Log("Hit something: " + rayHit.collider.gameObject.name);
+    }
+
+    public void SetIsRotLocked(bool newLock)
+    {
+        isRotLocked = newLock;
     }
 }
