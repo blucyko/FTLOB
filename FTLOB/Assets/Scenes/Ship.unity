@@ -1229,6 +1229,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717103689}
   m_CullTransparentMesh: 1
+--- !u!1 &801535040 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8287443789947682448, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+  m_PrefabInstance: {fileID: 907308674482888630}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &805829182
 GameObject:
   m_ObjectHideFlags: 0
@@ -4002,6 +4007,7 @@ GameObject:
   - component: {fileID: 1490689391}
   - component: {fileID: 1490689392}
   - component: {fileID: 1490689393}
+  - component: {fileID: 1490689394}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -4078,6 +4084,22 @@ MonoBehaviour:
   currentHealth: 25
   maxHealth: 25
   lerpSpeed: 0
+--- !u!114 &1490689394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490689389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45188a33a57457443bbf6dc4d82f22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PauseManager
+  optionsPanel: {fileID: 0}
+  pausePanel: {fileID: 801535040}
+  togglePauseAction: {fileID: 3533459928172052633, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  MenuScene: TitleScreen
 --- !u!1 &1490814541
 GameObject:
   m_ObjectHideFlags: 0
@@ -6414,6 +6436,54 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 379014625}
     m_Modifications:
+    - target: {fileID: 1668487376373466788, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1490689394}
+    - target: {fileID: 1668487376373466788, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenuButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4303678605419510916, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1490689394}
+    - target: {fileID: 4303678605419510916, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ControlsButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042260287034586747, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1490689394}
+    - target: {fileID: 6042260287034586747, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6899084845191062004, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1490689394}
+    - target: {fileID: 6899084845191062004, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OptionsButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 7342098851939781813, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1490689394}
+    - target: {fileID: 7342098851939781813, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668793994732642954, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1490689394}
+    - target: {fileID: 7668793994732642954, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResumeGame
+      objectReference: {fileID: 0}
     - target: {fileID: 7798802566173903043, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -960.2195
@@ -6458,8 +6528,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause Panel
       objectReference: {fileID: 0}
+    - target: {fileID: 8287443789947682448, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 9188655955163671707, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
