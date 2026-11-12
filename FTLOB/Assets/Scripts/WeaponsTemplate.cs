@@ -19,7 +19,9 @@ public class WeaponsTemplate : SystemsTemplate
 
     [SerializeField] protected float barrelSpeed = 0.5f;
 
-    [SerializeField] protected bool isRotLocked = false;
+    // [SerializeField] protected bool isRotLocked = false;
+
+    [SerializeField] protected GameObject reticle;
     protected Vector3 lastMousePos;
 
     protected bool isReady = false;
@@ -28,6 +30,7 @@ public class WeaponsTemplate : SystemsTemplate
 
     protected void Awake()
     {
+        reticle.SetActive(true);
         cam = Camera.main;
         SetPreferredCrew(1);
         SetCrew(pluggedCrew);
@@ -35,14 +38,15 @@ public class WeaponsTemplate : SystemsTemplate
 
         weaponRadius.localScale = new Vector3(maxRange, maxRange, 0f);
 
-        // fireAction.action.performed += OnClick;
-        // fireAction.action.Enable();
-        lastMousePos = transform.position + Vector3.right;
+        fireAction.action.performed += OnClick;
+        fireAction.action.Enable();
+        lastMousePos = transform.position + Vector3.right * maxRange;
     }
 
     protected void Update()
     {
         BarrelLookAtMouse();
+        reticle.transform.position = lastMousePos;
         // if(!isRotLocked)
         // {
         //     // BarrelLook(lastMousePos);
@@ -66,12 +70,12 @@ public class WeaponsTemplate : SystemsTemplate
     }
 
 
-    protected void Attack()
-    {
-        // Debug.Log("FIRE!!!");
-        SetCurrentRecharge(0);
-        SetIsReady(false);
-    }
+    // protected void Attack()
+    // {
+    //     // Debug.Log("FIRE!!!");
+    //     SetCurrentRecharge(0);
+    //     SetIsReady(false);
+    // }
 
     public void SetCurrentRecharge(float newRecharge)
     {
@@ -98,10 +102,6 @@ public class WeaponsTemplate : SystemsTemplate
         {
             // mouse position calculation
 
-            // Vector3 mousePos = Mouse.current.position.ReadValue();
-            // mousePos.z = Mathf.Abs(cam.transform.position.z - barrel.transform.position.z);
-            // mousePos = cam.ScreenToWorldPoint(mousePos);
-
             lastMousePos = Mouse.current.position.ReadValue();
             lastMousePos.z = Mathf.Abs(cam.transform.position.z - barrel.transform.position.z);
             lastMousePos = cam.ScreenToWorldPoint(lastMousePos);
@@ -115,11 +115,11 @@ public class WeaponsTemplate : SystemsTemplate
 
     protected void BarrelLook(Vector3 target)
     {
-        if (isRotLocked)
-        {
-            Debug.Log("weapon locked!");
-            return;
-        }
+        // if (isRotLocked)
+        // {
+        //     Debug.Log("weapon locked!");
+        //     return;
+        // }
         // determining required angle to look at mouse
         Vector2 dir = target - barrel.transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
@@ -143,7 +143,17 @@ public class WeaponsTemplate : SystemsTemplate
         {
             // fire the thing!
             Debug.Log("trigger fire");
+            ToggleIsSelected();
+            
+            if(!isReady)
+            {
+                Debug.Log("Weapon not ready!");
+                return;
+            }
+            
             FireWeapon();
+            SetCurrentRecharge(0);
+            SetIsReady(false);
         }
         
     }
