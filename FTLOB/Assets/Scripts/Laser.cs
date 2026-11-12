@@ -21,7 +21,7 @@ public class Laser : WeaponsTemplate
         fireAction.action.performed += OnClick;
         fireAction.action.Enable();
     }
-    public void FireLaser()
+    public override void FireWeapon()
     {
         StartCoroutine(Attack());
     }
@@ -29,7 +29,7 @@ public class Laser : WeaponsTemplate
     {
         if(isReady)
         {
-            SetIsRotLocked(true);
+            // SetIsRotLocked(true);
             Debug.Log("FIRIN MA LAYSA!!!");
             for(int i = 0; i < bulletNum; i++)
             {
@@ -40,14 +40,17 @@ public class Laser : WeaponsTemplate
             newBullet.GetComponent<LaserBullet>().SetBulletSpeed(bulletSpeed);
             GameObject newRadius = Instantiate(weaponRadius.gameObject, weaponRadius.position, weaponRadius.rotation);
             // newRadius.GetComponent<SpriteRenderer>().enabled = false;
-            newRadius.GetComponent<SpriteRenderer>().color = Color.black;
+
+            // enables visibility of max bullet distance, CHANGE TO TRANSPARENT LATER
+            newRadius.GetComponent<SpriteRenderer>().color = Color.black; 
+
             newRadius.SetActive(true);
             newBullet.GetComponent<LaserBullet>().SetBulletRadius(newRadius);
             newBullet.SetActive(true);
                 yield return new WaitForSeconds(bulletDelay);
             }
             base.Attack();
-            SetIsRotLocked(false);
+            // SetIsRotLocked(false);
             ToggleIsSelected();
         }
         else
@@ -56,14 +59,14 @@ public class Laser : WeaponsTemplate
         }
     }
 
-    void OnClick(InputAction.CallbackContext context)
-    {
-        if(isSelected)
-        {
-            // fire the thing!
-            Debug.Log("trigger fire");
-            FireLaser();
-        }
+    // void OnClick(InputAction.CallbackContext context)
+    // {
+    //     if(isSelected)
+    //     {
+    //         // fire the thing!
+    //         Debug.Log("trigger fire");
+    //         FireLaser();
+    //     }
         
-    }
+    // }
 }

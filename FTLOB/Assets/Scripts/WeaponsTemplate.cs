@@ -37,17 +37,18 @@ public class WeaponsTemplate : SystemsTemplate
 
         // fireAction.action.performed += OnClick;
         // fireAction.action.Enable();
-        // lastMousePos = transform.position + Vector3.right;
+        lastMousePos = transform.position + Vector3.right;
     }
 
     protected void Update()
     {
-        // BarrelLookAtMouse();
-        if(!isRotLocked)
-        {
-            // BarrelLook(lastMousePos);
-            BarrelLookAtMouse();
-        }
+        BarrelLookAtMouse();
+        // if(!isRotLocked)
+        // {
+        //     // BarrelLook(lastMousePos);
+        //     BarrelLookAtMouse();
+        // }
+        // BarrelLook(lastMousePos);
         UpdateRecharge();
     }
 
@@ -96,12 +97,20 @@ public class WeaponsTemplate : SystemsTemplate
         if(isSelected)
         {
             // mouse position calculation
-            Vector3 mousePos = Mouse.current.position.ReadValue();
-            mousePos.z = Mathf.Abs(cam.transform.position.z - barrel.transform.position.z);
-            mousePos = cam.ScreenToWorldPoint(mousePos);
 
-            BarrelLook(mousePos);
+            // Vector3 mousePos = Mouse.current.position.ReadValue();
+            // mousePos.z = Mathf.Abs(cam.transform.position.z - barrel.transform.position.z);
+            // mousePos = cam.ScreenToWorldPoint(mousePos);
+
+            lastMousePos = Mouse.current.position.ReadValue();
+            lastMousePos.z = Mathf.Abs(cam.transform.position.z - barrel.transform.position.z);
+            lastMousePos = cam.ScreenToWorldPoint(lastMousePos);
+
+
+            // BarrelLook(mousePos);
         }
+        
+        BarrelLook(lastMousePos);
     }
 
     protected void BarrelLook(Vector3 target)
@@ -122,49 +131,30 @@ public class WeaponsTemplate : SystemsTemplate
 
     }
 
-    // void OnClick(InputAction.CallbackContext context)
-    // {
-    //     if(!context.started)
-    //     {
-    //         Debug.Log("couldn't find context!");
-    //         return;
-    //     }
-
-    //     var rayHit = Physics2D.GetRayIntersection(cam.ScreenPointToRay(Mouse.current.position.ReadValue()));
-    //     if(!rayHit.collider)
-    //     {
-    //         Debug.Log("didn't hit!");
-    //     }
-
-    //     Debug.Log("Hit something: " + rayHit.collider.gameObject.name);
-    // }
-
-    public void SetIsRotLocked(bool newLock)
-    {
-        isRotLocked = newLock;
-    }
 
     public void SetLastMousePos(Vector3 newMousePos)
     {
         lastMousePos = newMousePos;
     }
 
-    // void OnClick(InputAction.CallbackContext context)
-    // {
-    //     if(isSelected)
-    //     {
-    //         // mouse position calculation
-    //         Vector3 mousePos = Mouse.current.position.ReadValue();
-    //         mousePos.z = Mathf.Abs(cam.transform.position.z - barrel.transform.position.z);
-    //         mousePos = cam.ScreenToWorldPoint(mousePos);
-            
-    //         SetLastMousePos(mousePos);
-    //     }
-    // }
+    protected void OnClick(InputAction.CallbackContext context)
+    {
+        if(isSelected)
+        {
+            // fire the thing!
+            Debug.Log("trigger fire");
+            FireWeapon();
+        }
+        
+    }
 
     public void ToggleIsSelected()
     {
         isSelected = !isSelected;
     }
     
+    public virtual void FireWeapon()
+    {
+        Debug.Log("I don't know how to fire...");
+    }
 }
