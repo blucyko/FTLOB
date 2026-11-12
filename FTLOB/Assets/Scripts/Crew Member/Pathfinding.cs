@@ -8,9 +8,12 @@ public class Pathfinding : MonoBehaviour
     [SerializeField] private Tilemap groundTilemap;
     [SerializeField] private Tilemap wallTilemap;
 
+    [Header("Navigation Grid)")]
+    [SerializeField] private Vector2 navigationCellSize;
+
     [Header("Obstacle Detection")]
     [SerializeField] private LayerMask obstacleLayer;
-    [SerializeField] private float obstacleDetectionRadius = 0.2f;
+    [SerializeField, Min(0f)] private float movementCheckRadius = 0.01f;
 
     [Header("Pathfinding Test")]
     [SerializeField] private bool generatePath;
@@ -24,16 +27,17 @@ public class Pathfinding : MonoBehaviour
 
     private bool pathGenerated;
 
-    private Dictionary<Vector3Int, Cell> cells;
+    // Each original tile is subdivided into smaller navigation cells, which are stored in this dictionary.
+    private Dictionary<Vector2Int, Cell> cells;
 
     [SerializeField]
-    private List<Vector3Int> cellsToSearch = new List<Vector3Int>();
+    private List<Vector2Int> cellsToSearch = new List<Vector2Int>();
 
     [SerializeField]
-    private List<Vector3Int> searchedCells = new List<Vector3Int>();
+    private List<Vector2Int> searchedCells = new List<Vector2Int>();
 
     [SerializeField]
-    private List<Vector3Int> finalPath = new List<Vector3Int>();
+    private List<Vector2Int> finalPath = new List<Vector2Int>();
 
     private void Update()
     {
@@ -43,8 +47,9 @@ public class Pathfinding : MonoBehaviour
 
             if (GenerateGrid())
             {
-                FindPath(
-                   new Vector3Int(testStartPosition.x, testStartPosition.y, 0), new Vector3Int(testEndPosition.x, testEndPosition.y, 0));
+                Vector2Int start = TileToNavigationCell(testStartPosition);
+                Vector2Int end = TileToNavigationCell(testEndPosition);
+                FindPath(start, end);
             }
         }
         else if (!generatePath)
@@ -56,7 +61,7 @@ public class Pathfinding : MonoBehaviour
     // Generate grid using painted ground tiles
     private bool GenerateGrid()
     {
-        cells = new Dictionary<Vector3Int, Cell>();
+        cells = new Dictionary<Vector2Int, Cell>();
 
         cellsToSearch.Clear();
         searchedCells.Clear();
@@ -69,31 +74,44 @@ public class Pathfinding : MonoBehaviour
         }
 
         Physics2D.SyncTransforms();
+
+        // Store the original cell size and bounds of the ground tilemap for Gizmos visualization
+        navigationCellSize = new Vector2(groundTilemap.cellSize.x, groundTilemap.cellSize.y);
         BoundsInt groundBounds = groundTilemap.cellBounds;
+
         foreach (Vector3Int position in groundBounds.allPositionsWithin)
         {
             if (!groundTilemap.HasTile(position))
                 continue;
 
-            Cell cell = new Cell(position);
-
+            Vector2Int tilePosition = new Vector2Int(position.x, position.y);
             Vector3 worldCenter = groundTilemap.GetCellCenterWorld(position);
 
-            // Mark cell as wall if it has a wall tile.
-            bool isWallTile = wallTilemap != null && wallTilemap.HasTile(position);
-
-            // Check if there's an obstacle in the cell.
-            bool hasObstacle = Physics2D.OverlapCircle(worldCenter, obstacleDetectionRadius, obstacleLayer) != null;
-
-            cell.isWall = isWallTile || hasObstacle;
-            cells.Add(position, cell);
+            // Check obstacle colliders
+            bool hasObstacle = Physics2D.OverlapCircle(worldCenter, movementCheckRadius, obstacleLayer) != null;
+            Cell cell = new Cell(tilePosition, worldCenter);
+            cell.isWall = hasObstacle;
+            cells.Add(tilePosition, cell);
         }
 
-        Debug.Log($"Generated {cells.Count} walkable cells from ground tilemap.",this);
+        Debug.Log($"Generated {cells.Count} navigation cells.");
         return cells.Count > 0;
     }
 
-    private void FindPath(Vector3Int startPos, Vector3Int endPos)
+    // Convert a tile position to its corresponding navigation cell position
+    private Vector2Int TileToNavigationCell(Vector3Int tilePosition)
+    {
+        return new Vector2Int(tilePosition.x, tilePosition.y);
+    }
+
+    // Convert a world position into its corresponding navigation cell position
+    private Vector2Int WorldToNavigationCell(Vector3 worldPosition)
+    {
+        Vector3Int tilePosition = groundTilemap.WorldToCell(worldPosition);
+        return new Vector2Int(tilePosition.x, tilePosition.y);
+    }
+
+    private void FindPath(Vector2Int startPos, Vector2Int endPos)
     {
         searchedCells.Clear();
         cellsToSearch.Clear();
@@ -148,9 +166,9 @@ public class Pathfinding : MonoBehaviour
         while (cellsToSearch.Count > 0)
         {
             // Find the open cell with the lowest fCost.
-            Vector3Int cellToSearch = cellsToSearch[0];
+            Vector2Int cellToSearch = cellsToSearch[0];
 
-            foreach (Vector3Int position in cellsToSearch)
+            foreach (Vector2Int position in cellsToSearch)
             {
                 Cell candidate = cells[position];
                 Cell currentBest = cells[cellToSearch];
@@ -178,27 +196,27 @@ public class Pathfinding : MonoBehaviour
         Debug.LogWarning($"Pathfinding: No path exists from {startPos} to {endPos}.");
     }
 
-    private void SearchCellNeighbors(Vector3Int cellPos, Vector3Int endPos)
+    private void SearchCellNeighbors(Vector2Int cellPos, Vector2Int endPos)
     {
         Cell currentCell = cells[cellPos];
 
         // Eight possible movement directions
-        Vector3Int[] directions = 
+        Vector2Int[] directions = 
         {
-            new Vector3Int( 0,  1, 0), // Up
-            new Vector3Int( 0, -1, 0), // Down
-            new Vector3Int(-1,  0, 0), // Left
-            new Vector3Int( 1,  0, 0), // Right
+            new Vector2Int( 0,  1), // Up
+            new Vector2Int( 0, -1), // Down
+            new Vector2Int(-1,  0), // Left
+            new Vector2Int( 1,  0), // Right
 
-            new Vector3Int(-1,  1, 0), // Up-left
-            new Vector3Int( 1,  1, 0), // Up-right
-            new Vector3Int(-1, -1, 0), // Down-left
-            new Vector3Int( 1, -1, 0)  // Down-right
+            new Vector2Int(-1,  1), // Up-left
+            new Vector2Int( 1,  1), // Up-right
+            new Vector2Int(-1, -1), // Down-left
+            new Vector2Int( 1, -1)  // Down-right
         };
 
-        foreach (Vector3Int direction in directions)
+        foreach (Vector2Int direction in directions)
         {
-            Vector3Int neighborPos = cellPos + direction;
+            Vector2Int neighborPos = cellPos + direction;
 
             if (!cells.TryGetValue(neighborPos, out Cell neighborNode))
                 continue;
@@ -211,8 +229,8 @@ public class Pathfinding : MonoBehaviour
             if (isDiagonal)
             {
                 // Prevent diagonal movement through corners of walls by checking adjacent cells.
-                Vector3Int horizontalNeighbor = cellPos + new Vector3Int(direction.x, 0, 0);
-                Vector3Int verticalNeighbor = cellPos + new Vector3Int(0, direction.y, 0);
+                Vector2Int horizontalNeighbor = cellPos + new Vector2Int(direction.x, 0);
+                Vector2Int verticalNeighbor = cellPos + new Vector2Int(0, direction.y);
                 if (!cells.TryGetValue(horizontalNeighbor, out Cell horizontalCell) || horizontalCell.isWall || 
                     !cells.TryGetValue(verticalNeighbor, out Cell verticalCell) || verticalCell.isWall)
                 {
@@ -243,22 +261,22 @@ public class Pathfinding : MonoBehaviour
         }
     }
 
-    private bool CanMoveBetween(Vector3Int startCell, Vector3Int endCell)
+    private bool CanMoveBetween(Vector2Int startCell, Vector2Int endCell)
     {
-        Vector3 startWorld = groundTilemap.GetCellCenterWorld(startCell);
-        Vector3 endWorld = groundTilemap.GetCellCenterWorld(endCell);
+        Vector3 startWorld = cells[startCell].worldPosition;
+        Vector3 endWorld = cells[endCell].worldPosition;
         Vector2 direction = (endWorld - startWorld).normalized;
         float distance = Vector2.Distance(startWorld, endWorld);
 
-        RaycastHit2D hit = Physics2D.CircleCast(startWorld, obstacleDetectionRadius, direction, distance, obstacleLayer);
+        RaycastHit2D hit = Physics2D.CircleCast(startWorld, movementCheckRadius, direction, distance, obstacleLayer);
         return hit.collider == null;
     }
 
-    private void ReconstructPath(Vector3Int startPos, Vector3Int endPos)
+    private void ReconstructPath(Vector2Int startPos, Vector2Int endPos)
     {
         finalPath.Clear();
 
-        Vector3Int currentPos = endPos;
+        Vector2Int currentPos = endPos;
         int safetyCounter = 0;
 
         while (currentPos != startPos)
@@ -290,7 +308,7 @@ public class Pathfinding : MonoBehaviour
         finalPath.Reverse();
     }
 
-    private int GetDistance(Vector3Int pos1, Vector3Int pos2)
+    private int GetDistance(Vector2Int pos1, Vector2Int pos2)
     {
         int dx = Mathf.Abs(pos1.x - pos2.x);
         int dy = Mathf.Abs(pos1.y - pos2.y);
@@ -316,23 +334,22 @@ public class Pathfinding : MonoBehaviour
             return false;
 
         // Convert the crew and destination world positions into tile cells.
-        Vector3Int startCell = groundTilemap.WorldToCell(worldStart);
-        Vector3Int endCell = groundTilemap.WorldToCell(worldDestination);
-        Debug.Log($"Start Cell: {startCell} - > center {groundTilemap.GetCellCenterWorld(startCell)}");
-        Debug.Log($"End Cell: {endCell} - > center {groundTilemap.GetCellCenterWorld(endCell)}");
+        Vector2Int startCell = WorldToNavigationCell(worldStart);
+        Vector2Int endCell = WorldToNavigationCell(worldDestination);
+        Debug.Log($"Start Cell: {startCell} - > center {GetCellWorldPosition(startCell)}");
+        Debug.Log($"End Cell: {endCell} - > center {GetCellWorldPosition(endCell)}");
 
         FindPath(startCell, endCell);
 
-        if (finalPath.Count == 0 ||
-            finalPath[finalPath.Count - 1] != endCell)
+        if (finalPath.Count == 0 || finalPath[finalPath.Count - 1] != endCell)
         {
             return false;
         }
 
         // Convert every path cell to its actual world-space center.
-        foreach (Vector3Int cell in finalPath)
+        foreach (Vector2Int cell in finalPath)
         {
-            Vector3 worldPosition = groundTilemap.GetCellCenterWorld(cell);
+            Vector3 worldPosition = GetCellWorldPosition(cell);
 
             worldPath.Add(worldPosition);
 
@@ -341,42 +358,47 @@ public class Pathfinding : MonoBehaviour
         return true;
     }
 
+    private Vector3 GetCellWorldPosition(Vector2Int cellPos)
+    {
+        return cells[cellPos].worldPosition;
+    }
+
     private void OnDrawGizmos()
     {
         if (!showGrid || cells == null || groundTilemap == null)
             return;
 
-        foreach (KeyValuePair<Vector3Int, Cell> pair in cells)
+        foreach (KeyValuePair<Vector2Int, Cell> pair in cells)
         {
-            Vector3Int cellPosition = pair.Key;
-            Vector3 worldPosition = groundTilemap.GetCellCenterWorld(cellPosition);
+            Cell cell = pair.Value;
 
-            if (pair.Value.isWall)
-                Gizmos.color = Color.red;
-            else
-                Gizmos.color = Color.green;
+            // Default colors based on obstacle detection.
+            Gizmos.color = cell.isWall ? Color.red : Color.green;
 
-            if (finalPath != null && finalPath.Contains(cellPosition))
+            // Highlight cells that belong to the final path.
+            if (finalPath != null && finalPath.Contains(cell.position))
+            {
                 Gizmos.color = Color.magenta;
+            }
 
-            Vector3 size = groundTilemap.cellSize;
-
-            Gizmos.DrawCube(worldPosition, new Vector3(size.x, size.y, 0.1f));
+            Gizmos.DrawCube(cell.worldPosition, new Vector3(navigationCellSize.x * 0.9f, navigationCellSize.y * 0.9f, 0.05f));
         }
     }
 
     private class Cell
     {
-        public Vector3Int position;
+        public Vector2Int position;
+        public Vector3 worldPosition;
         public int fCost = int.MaxValue;
         public int gCost = int.MaxValue;
         public int hCost = int.MaxValue;
-        public Vector3Int connection;
+        public Vector2Int connection;
         public bool isWall;
 
-        public Cell(Vector3Int pos)
+        public Cell(Vector2Int pos, Vector3 worldPos)
         {
             position = pos;
+            worldPosition = worldPos;
             connection = pos;
         }
     }
