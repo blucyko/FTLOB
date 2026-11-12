@@ -213,15 +213,11 @@ public class Pathfinding : MonoBehaviour
                 // Prevent diagonal movement through corners of walls by checking adjacent cells.
                 Vector3Int horizontalNeighbor = cellPos + new Vector3Int(direction.x, 0, 0);
                 Vector3Int verticalNeighbor = cellPos + new Vector3Int(0, direction.y, 0);
-                if ((cells.TryGetValue(horizontalNeighbor, out Cell horizontalCell) && horizontalCell.isWall) ||
-                    (cells.TryGetValue(verticalNeighbor, out Cell verticalCell) && verticalCell.isWall))
+                if (!cells.TryGetValue(horizontalNeighbor, out Cell horizontalCell) || horizontalCell.isWall || 
+                    !cells.TryGetValue(verticalNeighbor, out Cell verticalCell) || verticalCell.isWall)
                 {
                     continue;
                 }
-                if (horizontalCell.isWall || verticalCell.isWall)
-                {
-                    continue;
-                }   
             }
 
             // Check that movement to the neighbor is not blocked by an obstacle in the world.
