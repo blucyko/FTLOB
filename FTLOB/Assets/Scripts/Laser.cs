@@ -9,7 +9,7 @@ public class Laser : WeaponsTemplate
     [SerializeField] private int bulletNum;
     [SerializeField] private float bulletDelay;
     [SerializeField] private float bulletSpeed;
-    [SerializeField] private GameObject bullet;
+    // [SerializeField] private GameObject bullet;
     [SerializeField] private float bulletSpread;
 
     // Update is called once per frame
@@ -23,9 +23,9 @@ public class Laser : WeaponsTemplate
     // }
     public override void FireWeapon()
     {
-        StartCoroutine(BurstFIre());
+        StartCoroutine(BurstFire());
     }
-    public IEnumerator BurstFIre()
+    public IEnumerator BurstFire()
     {
         // ToggleIsSelected();
         // if(isReady)
@@ -36,7 +36,7 @@ public class Laser : WeaponsTemplate
         {
             //TODO: instantiate laser
             Debug.Log("fired 1 laser!");
-            GameObject newBullet = Instantiate(bullet, projectileSpawn.position, projectileSpawn.rotation);
+            GameObject newBullet = Instantiate(projectile, projectileSpawn.position, projectileSpawn.rotation);
             newBullet.transform.Rotate(new Vector3(0, 0, Random.Range(-1 * bulletSpread, bulletSpread)));
             newBullet.GetComponent<LaserBullet>().SetBulletSpeed(bulletSpeed);
             GameObject newRadius = Instantiate(weaponRadius.gameObject, weaponRadius.position, weaponRadius.rotation);
@@ -49,7 +49,9 @@ public class Laser : WeaponsTemplate
             newRadius.SetActive(true);
             newBullet.GetComponent<LaserBullet>().SetBulletRadius(newRadius);
             newBullet.SetActive(true);
-                yield return new WaitForSeconds(bulletDelay);
+            
+            // wait for {bulletDelay} amount of seconds, then fire again
+            yield return new WaitForSeconds(bulletDelay);
         }
     // }
         // else
