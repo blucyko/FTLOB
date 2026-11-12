@@ -33,7 +33,9 @@ public class WeaponsTemplate : SystemsTemplate
         reticle.SetActive(true);
         cam = Camera.main;
         SetPreferredCrew(1);
-        SetCrew(pluggedCrew);
+
+        // sets the plugged crew to gunner; for TESTING ONLY
+        SetCrew(preferredCrew);
         isSelected = false;
 
         weaponRadius.localScale = new Vector3(maxRange, maxRange, 0f);
