@@ -1890,9 +1890,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c49d835b6880a3b4bbb9901643986c01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
-  optionsPanel: {fileID: 625379409}
-  pausePanel: {fileID: 278375748}
-  togglePauseAction: {fileID: 3533459928172052633, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   startScene: Ship
   titleScene: TitleScreen
   tutorialScene: Tutorial
@@ -2246,6 +2243,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1089165915}
   m_CullTransparentMesh: 1
+--- !u!1 &1130119890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1130119891}
+  - component: {fileID: 1130119892}
+  m_Layer: 0
+  m_Name: PauseManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1130119891
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130119890}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1130119892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130119890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45188a33a57457443bbf6dc4d82f22f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PauseManager
+  optionsPanel: {fileID: 0}
+  pausePanel: {fileID: 278375748}
+  togglePauseAction: {fileID: 3533459928172052633, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  MenuScene: TitleScreen
 --- !u!1001 &1150901603
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2254,6 +2299,54 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1270581508}
     m_Modifications:
+    - target: {fileID: 1668487376373466788, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1130119892}
+    - target: {fileID: 1668487376373466788, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenuButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4303678605419510916, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1130119892}
+    - target: {fileID: 4303678605419510916, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ControlsButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042260287034586747, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1130119892}
+    - target: {fileID: 6042260287034586747, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6899084845191062004, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1130119892}
+    - target: {fileID: 6899084845191062004, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OptionsButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 7342098851939781813, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1130119892}
+    - target: {fileID: 7342098851939781813, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668793994732642954, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1130119892}
+    - target: {fileID: 7668793994732642954, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResumeGame
+      objectReference: {fileID: 0}
     - target: {fileID: 7798802566173903043, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -959
@@ -2303,7 +2396,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 9188655955163671707, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5a4b930aa5431e41a8ab5b12af065bb, type: 3}
@@ -3072,6 +3166,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1015572916}
+  - {fileID: 1130119891}
   - {fileID: 921141267}
   - {fileID: 1569527809}
   - {fileID: 61256207}

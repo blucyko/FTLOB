@@ -9,69 +9,74 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private GameObject optionsPanel;
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private InputActionReference togglePauseAction;
-
-    // [SerializeField] private string currentScene;
     [SerializeField] private string MenuScene = "TitleScreen";
 
-    private bool pauseActive;
+    private bool isPaused = false;
 
-    // private void OnEnable()
-    // {
-    //     if (togglePauseAction != null)
-    //     {
-    //         togglePauseAction.action.performed += TogglePause;
-    //         togglePauseAction.action.Enable();
-    //     }
-    // }
+    private void Awake()
+    {
+        if (pausePanel)
+        {
+            pausePanel.SetActive(false);
+        }
 
-    // private void OnDisable()
-    // {
-    //     if (togglePauseAction != null)
-    //     {
-    //         togglePauseAction.action.performed -= TogglePause;
-    //         togglePauseAction.action.Disable();
-    //     }
-    // }
+        isPaused = false;
+        Time.timeScale = 1f; // Ensure the game is running when starting
+    }
 
-    void Start()
+    private void OnEnable()
     {
         if (togglePauseAction != null)
         {
-            // links the TogglePause function to the togglePauseAction InputActionReference, 
-            // so that when the button for it is pressed it calls togglePauseAction
-            togglePauseAction.action.performed += TogglePause; 
+            togglePauseAction.action.performed += OnTogglePause;
             togglePauseAction.action.Enable();
         }
-        pausePanel.SetActive(false);
-        pauseActive = pausePanel.activeSelf;
     }
 
-
-
-
-    public void TogglePause(InputAction.CallbackContext context)
+    private void OnDisable()
     {
-        if (pausePanel == null)
+        if (togglePauseAction != null)
         {
-            return;
+            togglePauseAction.action.performed -= OnTogglePause;
+            togglePauseAction.action.Disable();
         }
-
-        ResumeButton();
     }
 
-    public void ResumeButton()
+    private void OnTogglePause(InputAction.CallbackContext context)
     {
-        // Don't toggle pause menu if options panel is open
-        if (optionsPanel != null && optionsPanel.activeSelf)
-        {
-            return;
-        }
+        TogglePause();
+    }
 
-        pauseActive = !pauseActive;
-        Debug.Log("Is pause panel active? " + pauseActive);
-        pausePanel.SetActive(pauseActive);
-        Time.timeScale = pauseActive ? 0f : 1f; // Pause or resume the game based on pause panel state
-        Debug.Log(pauseActive ? "Game Paused" : "Game Resumed");
+    public void TogglePause()
+    {
+        Debug.Log("Pause button pressed");
+        if (isPaused)
+        {
+            ResumeGame();
+        }
+        else
+        {
+            PauseGame();
+        }
+    }
+
+    public void PauseGame()
+    {
+        isPaused = true;
+        Time.timeScale = 0f;
+        if (pausePanel != null)
+        {
+            pausePanel.SetActive(true);
+        }
+    }
+    public void ResumeGame()
+    {
+        isPaused = false;
+        Time.timeScale = 1f;
+        if (pausePanel != null)
+        {
+            pausePanel.SetActive(false);
+        }
     }
 
     public void MainMenuButton()
