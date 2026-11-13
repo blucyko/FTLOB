@@ -17,8 +17,11 @@ public class Beam : WeaponsTemplate
 
     private void Awake()
     {
+        // defaults beam to disabled
         base.Awake();
         projectile.SetActive(false);
+
+        // sets the length of the beam
         projectile.transform.localScale = new Vector3(maxRange, projectile.transform.localScale.y, 0);
     }
     public override void FireWeapon()
@@ -30,6 +33,8 @@ public class Beam : WeaponsTemplate
     {
         SetIsFiring(true);
         projectile.SetActive(true);
+
+        // waits for {beamDuration} seconds before turning the beam off
         yield return new WaitForSeconds(beamDuration);
         projectile.SetActive(false);
         SetIsFiring(false);

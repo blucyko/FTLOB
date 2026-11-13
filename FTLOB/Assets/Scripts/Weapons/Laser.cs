@@ -14,33 +14,27 @@ public class Laser : WeaponsTemplate
 
     // Update is called once per frame
 
-    // private void Awake()
-    // {
-    //     base.Awake();
-        
-    //     fireAction.action.performed += OnClick;
-    //     fireAction.action.Enable();
-    // }
     public override void FireWeapon()
     {
         StartCoroutine(BurstFire());
     }
     public IEnumerator BurstFire()
     {
-        // ToggleIsSelected();
-        // if(isReady)
-        // {
-            // SetIsRotLocked(true);
         SetIsFiring(true);
         Debug.Log("FIRIN MA LAYSA!!!");
         for(int i = 0; i < bulletNum; i++)
         {
-            //TODO: instantiate laser
+            //instantiate laser
             Debug.Log("fired 1 laser!");
             GameObject newBullet = Instantiate(projectile, projectileSpawn.position, projectileSpawn.rotation);
             newBullet.transform.Rotate(new Vector3(0, 0, Random.Range(-1 * bulletSpread, bulletSpread)));
             newBullet.GetComponent<LaserBullet>().SetBulletSpeed(bulletSpeed);
+
+            // instantiates a new weapon radius, which the bullet will use to check if it is at the maximum range
+            // currently, the actual maximum range is slightly longer than the specified range
+            // this is because the bullet is deleted when it leaves the radius' collider, and does not actually check distance
             GameObject newRadius = Instantiate(weaponRadius.gameObject, weaponRadius.position, weaponRadius.rotation);
+
             // // disables sprite for the current bullet's radius
             // newRadius.GetComponent<SpriteRenderer>().enabled = false;
 
@@ -55,11 +49,6 @@ public class Laser : WeaponsTemplate
             yield return new WaitForSeconds(bulletDelay);
         }
         SetIsFiring(false);
-    // }
-        // else
-        // {
-        //     Debug.Log("laser isn't ready yet!");
-        // }
     }
 
 }

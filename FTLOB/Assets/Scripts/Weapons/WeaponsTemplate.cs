@@ -5,28 +5,79 @@ using UnityEngine.InputSystem;
 
 public class WeaponsTemplate : SystemsTemplate
 {
+    /// <summary>
+    /// <para>true if the weapon is currently selected </para>
+    /// </summary>
     [SerializeField] protected bool isSelected = false;
+
+    /// <summary>
+    /// <para>true if the weapon is currently firing </para>
+    /// </summary>
     [SerializeField]protected bool isFiring = false;
+
+    /// <summary>
+    /// <para>input for firing the weapon </para>
+    /// </summary>
     [SerializeField] protected InputActionReference fireAction;
 
+    /// <summary>
+    /// <para>GameObject for the weapon's barrel </para>
+    /// </summary>
     [SerializeField] protected GameObject barrel;
+
+    /// <summary>
+    /// <para>GameObject of the weapon's projectile </para>
+    /// </summary>
     [SerializeField] protected GameObject projectile;
+
+    /// <summary>
+    /// <para>GameObject for the weapon's max range </para>
+    /// </summary>
     [SerializeField] protected Transform weaponRadius;
+
+    /// <summary>
+    /// <para>Transform where the projectile is spawned at </para>
+    /// </summary>
     [SerializeField] protected Transform projectileSpawn;
+    
+    /// <summary>
+    /// <para>size of the weapon's radius </para>
+    /// </summary>
     [SerializeField] protected float maxRange = 20f;
     
+    /// <summary>
+    /// <para>time in seconds it takes for the weapon to recharge with the preferred crew memeber </para>
+    /// </summary>
     [SerializeField] protected float maxRecharge = 20f;
+    
+    /// <summary>
+    /// <para>current recharge of the weapon (updated every frame until it hits max recharge) </para>
+    /// </summary>
     [SerializeField] protected float currentRecharge = 0f;
 
+    /// <summary>
+    /// <para>speed at which the barrel turns to look at the target </para>
+    /// </summary>
     [SerializeField] protected float barrelSpeed = 0.5f;
 
-    // [SerializeField] protected bool isRotLocked = false;
-
+    /// <summary>
+    /// <para>reticle for the weapon (i.e. target that the barrel will look at) </para>
+    /// </summary>
     [SerializeField] protected GameObject reticle;
+    
+    /// <summary>
+    /// <para>position that the barrel will look at </para>
+    /// </summary>
     protected Vector3 lastMousePos;
 
-    [SerializeField]protected bool isReady = false;
+    /// <summary>
+    /// <para>true if the weapon is fully charged </para>
+    /// </summary>
+    protected bool isReady = false;
 
+    /// <summary>
+    /// <para>main camera of the scene </para>
+    /// </summary>
     private Camera cam;
 
     protected void Awake()
@@ -39,11 +90,14 @@ public class WeaponsTemplate : SystemsTemplate
         SetCrew(preferredCrew);
         isSelected = false;
 
+        //sets the scale of the weapon radius based on the weapon's maximum range
         weaponRadius.localScale = new Vector3(maxRange, maxRange, 0f);
 
+        // links the fire input to the function that fires the weapon
         fireAction.action.performed += OnClick;
         fireAction.action.Enable();
-        // lastMousePos = projectileSpawn.transform.position + Vector3.right * maxRange;
+
+        // initiates the starting location for the reticle
         lastMousePos = projectileSpawn.transform.position + Vector3.right * maxRange * 0.5f;
 
         SetIsFiring(false);
@@ -51,14 +105,11 @@ public class WeaponsTemplate : SystemsTemplate
 
     protected void Update()
     {
+        // every frame, tries to make the barrel look at the target position
         BarrelLookAtMouse();
+
+        // changes the position of the reticle to the target position
         reticle.transform.position = lastMousePos;
-        // if(!isRotLocked)
-        // {
-        //     // BarrelLook(lastMousePos);
-        //     BarrelLookAtMouse();
-        // }
-        // BarrelLook(lastMousePos);
         UpdateRecharge();
     }
 
@@ -71,17 +122,9 @@ public class WeaponsTemplate : SystemsTemplate
         if(currentRecharge >= maxRecharge)
         {
             SetIsReady(true);
-            Debug.Log("Weapon is ready!");
+            // Debug.Log("Weapon is ready!");
         }
     }
-
-
-    // protected void Attack()
-    // {
-    //     // Debug.Log("FIRE!!!");
-    //     SetCurrentRecharge(0);
-    //     SetIsReady(false);
-    // }
 
     public void SetCurrentRecharge(float newRecharge)
     {
@@ -107,13 +150,9 @@ public class WeaponsTemplate : SystemsTemplate
         if(isSelected)
         {
             // mouse position calculation
-
             lastMousePos = Mouse.current.position.ReadValue();
             lastMousePos.z = Mathf.Abs(cam.transform.position.z - barrel.transform.position.z);
             lastMousePos = cam.ScreenToWorldPoint(lastMousePos);
-
-
-            // BarrelLook(mousePos);
         }
         
         BarrelLook(lastMousePos);
@@ -121,11 +160,6 @@ public class WeaponsTemplate : SystemsTemplate
 
     protected void BarrelLook(Vector3 target)
     {
-        // if (isRotLocked)
-        // {
-        //     Debug.Log("weapon locked!");
-        //     return;
-        // }
         // determining required angle to look at mouse
         Vector2 dir = target - barrel.transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
@@ -143,6 +177,11 @@ public class WeaponsTemplate : SystemsTemplate
         lastMousePos = newMousePos;
     }
 
+
+    /// <summary>
+    /// <para>when the weapon is selected, fires the weapon if the recharge is full, otherwise do nothing </para>
+    /// <para>in all cases, unselects the weapon when called </para>
+    /// </summary>
     protected void OnClick(InputAction.CallbackContext context)
     {
         if(isSelected)
@@ -156,12 +195,10 @@ public class WeaponsTemplate : SystemsTemplate
                 Debug.Log("Weapon not ready!");
                 return;
             }
-            // SetIsFiring(true);
             
             FireWeapon();
             SetCurrentRecharge(0);
             SetIsReady(false);
-            // SetIsFiring(false);
         }
         
     }

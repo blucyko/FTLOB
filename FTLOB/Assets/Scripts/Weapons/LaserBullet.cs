@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class LaserBullet : MonoBehaviour
@@ -9,7 +10,7 @@ public class LaserBullet : MonoBehaviour
     [SerializeField] private GameObject bulletRadius;
     private Rigidbody2D rb;
 
-    void Start()
+    void OnEnable()
     {
         rb = this.gameObject.GetComponent<Rigidbody2D>();
     }
