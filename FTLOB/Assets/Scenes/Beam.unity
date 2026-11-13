@@ -820,7 +820,7 @@ MonoBehaviour:
   projectile: {fileID: 791145682}
   weaponRadius: {fileID: 205825614}
   projectileSpawn: {fileID: 119532560}
-  maxRange: 20
+  maxRange: 5
   maxRecharge: 20
   currentRecharge: 0
   barrelSpeed: 2

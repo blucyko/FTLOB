@@ -28,9 +28,11 @@ public class Beam : WeaponsTemplate
 
     public IEnumerator BeamFire()
     {
+        SetIsFiring(true);
         projectile.SetActive(true);
         yield return new WaitForSeconds(beamDuration);
         projectile.SetActive(false);
+        SetIsFiring(false);
     }
 
 

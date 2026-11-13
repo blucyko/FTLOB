@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class WeaponsTemplate : SystemsTemplate
 {
     [SerializeField] protected bool isSelected = false;
+    [SerializeField]protected bool isFiring = false;
     [SerializeField] protected InputActionReference fireAction;
 
     [SerializeField] protected GameObject barrel;
@@ -24,7 +25,7 @@ public class WeaponsTemplate : SystemsTemplate
     [SerializeField] protected GameObject reticle;
     protected Vector3 lastMousePos;
 
-    protected bool isReady = false;
+    [SerializeField]protected bool isReady = false;
 
     private Camera cam;
 
@@ -44,6 +45,8 @@ public class WeaponsTemplate : SystemsTemplate
         fireAction.action.Enable();
         // lastMousePos = projectileSpawn.transform.position + Vector3.right * maxRange;
         lastMousePos = projectileSpawn.transform.position + Vector3.right * maxRange * 0.5f;
+
+        SetIsFiring(false);
     }
 
     protected void Update()
@@ -153,17 +156,27 @@ public class WeaponsTemplate : SystemsTemplate
                 Debug.Log("Weapon not ready!");
                 return;
             }
+            // SetIsFiring(true);
             
             FireWeapon();
             SetCurrentRecharge(0);
             SetIsReady(false);
+            // SetIsFiring(false);
         }
         
     }
 
     public void ToggleIsSelected()
     {
-        isSelected = !isSelected;
+        if(!isFiring)
+        {
+            isSelected = !isSelected;
+        }
+    }
+    
+    public void SetIsFiring(bool newIsFire)
+    {
+        isFiring = newIsFire;
     }
     
     public virtual void FireWeapon()

@@ -31,6 +31,7 @@ public class Laser : WeaponsTemplate
         // if(isReady)
         // {
             // SetIsRotLocked(true);
+        SetIsFiring(true);
         Debug.Log("FIRIN MA LAYSA!!!");
         for(int i = 0; i < bulletNum; i++)
         {
@@ -53,6 +54,7 @@ public class Laser : WeaponsTemplate
             // wait for {bulletDelay} amount of seconds, then fire again
             yield return new WaitForSeconds(bulletDelay);
         }
+        SetIsFiring(false);
     // }
         // else
         // {
