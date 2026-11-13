@@ -38,6 +38,7 @@ public class Beam : WeaponsTemplate
         yield return new WaitForSeconds(beamDuration);
         projectile.SetActive(false);
         SetIsFiring(false);
+        SetCurrentRecharge(0);
     }
 
 

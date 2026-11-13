@@ -197,7 +197,6 @@ public class WeaponsTemplate : SystemsTemplate
             }
             
             FireWeapon();
-            SetCurrentRecharge(0);
             SetIsReady(false);
         }
         

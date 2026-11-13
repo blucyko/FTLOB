@@ -49,6 +49,7 @@ public class Laser : WeaponsTemplate
             yield return new WaitForSeconds(bulletDelay);
         }
         SetIsFiring(false);
+        SetCurrentRecharge(0);
     }
 
 }
