@@ -626,7 +626,7 @@ Transform:
   m_GameObject: {fileID: 662945312}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.67, y: -0.125, z: 0}
+  m_LocalPosition: {x: 0.67, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -979,7 +979,6 @@ MonoBehaviour:
   bulletNum: 10
   bulletDelay: 0.1
   bulletSpeed: 5
-  bullet: {fileID: 1415128035}
   bulletSpread: 50
 --- !u!61 &982069883
 BoxCollider2D:
@@ -1537,7 +1536,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.9547169, g: 0.7836539, b: 0.055841886, a: 1}
@@ -1559,7 +1558,7 @@ Transform:
   m_GameObject: {fileID: 1571670648}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.67, y: -0.125, z: 0}
+  m_LocalPosition: {x: 2.17, y: -0.125, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

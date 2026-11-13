@@ -42,7 +42,8 @@ public class WeaponsTemplate : SystemsTemplate
 
         fireAction.action.performed += OnClick;
         fireAction.action.Enable();
-        lastMousePos = transform.position + Vector3.right * maxRange;
+        // lastMousePos = projectileSpawn.transform.position + Vector3.right * maxRange;
+        lastMousePos = projectileSpawn.transform.position + Vector3.right * maxRange * 0.5f;
     }
 
     protected void Update()
