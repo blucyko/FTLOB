@@ -4,12 +4,26 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Movement : MonoBehaviour
 {
+    private enum FacingDirection
+    {
+        Up,
+        Down,
+        Left,
+        Right
+    }
+
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 2f;
     [SerializeField] private float arrivalDistance = 0.02f;
 
+    [Header("Animation")]
+    [SerializeField] private Animator _animator;
+    [SerializeField] private SpriteRenderer _spriteRenderer;
+    [SerializeField] private Transform _spriteTransform;
+
     private readonly Queue<Vector3> pathQueue = new Queue<Vector3>();
     private Rigidbody2D rb;
+    private FacingDirection facingDirection = FacingDirection.Down;
 
     public bool IsMoving => pathQueue.Count > 0;
 
@@ -25,7 +39,10 @@ public class Movement : MonoBehaviour
         pathQueue.Clear();
 
         if (path == null || path.Count == 0)
+        {
+            UpdateAnimation();
             return;
+        }
 
         foreach (Vector3 waypoint in path)
         {
@@ -37,12 +54,16 @@ public class Movement : MonoBehaviour
                 pathQueue.Enqueue(waypoint);
             }
         }
+        UpdateAnimation();
     }
 
     private void FixedUpdate()
     {
         if (pathQueue.Count == 0)
+        {
+            UpdateAnimation();
             return;
+        }
 
         Vector3 waypoint = pathQueue.Peek();
         Vector2 target = new Vector2(waypoint.x, waypoint.y);
@@ -51,8 +72,12 @@ public class Movement : MonoBehaviour
         {
             rb.position = target;
             pathQueue.Dequeue();
+            UpdateAnimation();
             return;
         }
+
+        Vector2 direction = target - rb.position;
+        UpdateFacingDirection(direction);
 
         Vector2 nextPosition = Vector2.MoveTowards(
             rb.position,
@@ -61,6 +86,56 @@ public class Movement : MonoBehaviour
         );
 
         rb.MovePosition(nextPosition);
+        UpdateAnimation();
+    }
+
+    private void UpdateFacingDirection(Vector2 direction)
+    {
+        if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+        {
+            facingDirection = direction.x > 0 ? FacingDirection.Right : FacingDirection.Left;
+        }
+        else
+        {
+            facingDirection = direction.y > 0 ? FacingDirection.Up : FacingDirection.Down;
+        }
+        ApplyFacingDirection();
+    }
+
+    private void ApplyFacingDirection()
+    {
+        switch (facingDirection)
+        {
+            case FacingDirection.Down:
+                _spriteTransform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+                _spriteRenderer.flipX = false;
+                _spriteRenderer.flipY = false;
+                break;
+            case FacingDirection.Up:
+                _spriteTransform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+                _spriteRenderer.flipX = false;
+                _spriteRenderer.flipY = true;
+                break;
+            case FacingDirection.Left:
+                // Rotate the sprite so it appears as facing left
+                _spriteTransform.localRotation = Quaternion.Euler(0f, 0f, -90f);
+                _spriteRenderer.flipX = false;
+                _spriteRenderer.flipY = false;
+                break;
+            case FacingDirection.Right:
+                // Rotate the sprite so it appears as facing right
+                _spriteTransform.localRotation = Quaternion.Euler(0f, 0f, 90f);
+                _spriteRenderer.flipX = false;
+                _spriteRenderer.flipY = false;
+                break;
+        }
+    }
+    private void UpdateAnimation()
+    {
+        bool walking = IsMoving;
+
+        _animator.SetBool("IsWalking", walking);
+        _animator.SetBool("IsIdle", !walking);
     }
 
     private void OnDrawGizmosSelected()
