@@ -47,6 +47,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Tilemap
+    uniqueID: 3096717815
+    locked: 0
+  - name: UI
+    uniqueID: 2449727767
+    locked: 0
   m_RenderingLayers:
   - Default
   - Light Layer 1

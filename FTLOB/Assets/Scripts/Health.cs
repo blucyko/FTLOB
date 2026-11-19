@@ -34,7 +34,7 @@ public class Health : MonoBehaviour
 
     bool DisplayHealth(float _health, int point)
     {
-        return ((point * 2.5) >= _health);
+        return ((point * 1) >= _health);
     }
 
     public void Damage(float damagePoints)
