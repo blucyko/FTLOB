@@ -7975,7 +7975,7 @@ GameObject:
   - component: {fileID: 1058026050}
   - component: {fileID: 1058026051}
   m_Layer: 0
-  m_Name: Crew Member
+  m_Name: Shielder
   m_TagString: Crew Member
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
