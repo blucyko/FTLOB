@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NodeNav.unity
     guid: 0fbb3b50a7203e149aaeb56b895d64e6
+  - enabled: 1
+    path: Assets/Scenes/DummyEnemy.unity
+    guid: 59d48f9f5f1d6a34aa1874d853c35104
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

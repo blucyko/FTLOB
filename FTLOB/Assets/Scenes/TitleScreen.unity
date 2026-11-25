@@ -1890,7 +1890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c49d835b6880a3b4bbb9901643986c01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenu
-  startScene: Ship
+  startScene: NodeNav
   titleScene: TitleScreen
   tutorialScene: Tutorial
   creditsScene: Credits
