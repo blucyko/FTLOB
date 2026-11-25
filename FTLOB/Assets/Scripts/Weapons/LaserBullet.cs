@@ -8,6 +8,7 @@ public class LaserBullet : MonoBehaviour
     [SerializeField] private float bulletSpeed = 0;
     // [SerializeField] private float maxRange = 20;
     [SerializeField] private GameObject bulletRadius;
+    [SerializeField] private string enemyTag = "Enemy";
     private Rigidbody2D rb;
 
     void OnEnable()
@@ -31,16 +32,37 @@ public class LaserBullet : MonoBehaviour
         bulletRadius = newRadius;
     }
 
+    public void SetEnemyTag(string newTag)
+    {
+        enemyTag = newTag;
+    }
+
     void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("bullet exited radius!");
-        Debug.Log("tag of radius is: " + collision.gameObject.tag);
+        // Debug.Log("bullet exited radius!");
+        // Debug.Log("tag of radius is: " + collision.gameObject.tag);
         // if (collision.gameObject.tag.Equals("weapon radius"))
         if (collision.gameObject == bulletRadius)
         {
-            Debug.Log("destroy!");
-            Destroy(bulletRadius);
-            Destroy(this.gameObject);
+            DestroyBullet();
+        }
+    }
+
+    void DestroyBullet()
+    {
+        Debug.Log("destroy!");
+        Destroy(bulletRadius);
+        Destroy(this.gameObject);
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        RoomHealth damagedRoom = collision.gameObject.GetComponent<RoomHealth>();
+        if(collision.gameObject.tag == enemyTag && damagedRoom != null)
+        {
+            // Debug.Log("it's an enemy!");
+            damagedRoom.Damage(1);
+            Destroy(gameObject);
         }
     }
 }

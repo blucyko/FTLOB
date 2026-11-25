@@ -86,10 +86,10 @@ MonoBehaviour:
   isFiring: 0
   fireAction: {fileID: 1223840082507767289, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   barrel: {fileID: 4793565494102982681}
-  projectile: {fileID: 0}
+  projectile: {fileID: 1908380356003975158, guid: fe048cac7d3cea1448cd1759c1d8bd5c, type: 3}
   weaponRadius: {fileID: 6886880903658924909}
   projectileSpawn: {fileID: 5781484567769633308}
-  maxRange: 5
+  maxRange: 100
   maxRecharge: 10
   currentRecharge: 0
   barrelSpeed: 0.5
@@ -97,7 +97,7 @@ MonoBehaviour:
   bulletNum: 10
   bulletDelay: 0.1
   bulletSpeed: 5
-  bulletSpread: 50
+  bulletSpread: 15
 --- !u!61 &7161242579334390786
 BoxCollider2D:
   m_ObjectHideFlags: 0

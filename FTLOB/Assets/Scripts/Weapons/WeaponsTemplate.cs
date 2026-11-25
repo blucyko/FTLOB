@@ -75,6 +75,12 @@ public class WeaponsTemplate : SystemsTemplate
     /// </summary>
     protected bool isReady = false;
 
+    
+    /// <summary>
+    /// <para>tag of the GameObject that this weapon's attacks will damage </para>
+    /// </summary>
+    [SerializeField] protected string enemyTag = "Enemy";
+
     /// <summary>
     /// <para>main camera of the scene </para>
     /// </summary>
@@ -82,7 +88,7 @@ public class WeaponsTemplate : SystemsTemplate
 
     protected void Awake()
     {
-        reticle.SetActive(true);
+        if(reticle != null) reticle.SetActive(true);
         cam = Camera.main;
         SetPreferredCrew(1);
 
@@ -94,8 +100,11 @@ public class WeaponsTemplate : SystemsTemplate
         weaponRadius.localScale = new Vector3(maxRange, maxRange, 0f);
 
         // links the fire input to the function that fires the weapon
-        fireAction.action.performed += OnClick;
-        fireAction.action.Enable();
+        if(fireAction != null)
+        {
+            fireAction.action.performed += OnClick;
+            fireAction.action.Enable();
+        }
 
         // initiates the starting location for the reticle
         lastMousePos = projectileSpawn.transform.position + Vector3.right * maxRange * 0.5f;
@@ -109,7 +118,7 @@ public class WeaponsTemplate : SystemsTemplate
         BarrelLookAtMouse();
 
         // changes the position of the reticle to the target position
-        reticle.transform.position = lastMousePos;
+        if(reticle != null) reticle.transform.position = lastMousePos;
         UpdateRecharge();
     }
 
@@ -117,6 +126,7 @@ public class WeaponsTemplate : SystemsTemplate
     {
         if(currentRecharge < maxRecharge)
         {
+            SetIsReady(false);
             SetCurrentRecharge(currentRecharge + Time.deltaTime * crewMod);
         }
         if(currentRecharge >= maxRecharge)
@@ -197,7 +207,7 @@ public class WeaponsTemplate : SystemsTemplate
             }
             
             FireWeapon();
-            SetIsReady(false);
+            // SetIsReady(false);
         }
         
     }
@@ -213,6 +223,11 @@ public class WeaponsTemplate : SystemsTemplate
     public void SetIsFiring(bool newIsFire)
     {
         isFiring = newIsFire;
+    }
+
+    public bool GetIsFiring()
+    {
+        return isFiring;
     }
     
     public virtual void FireWeapon()
