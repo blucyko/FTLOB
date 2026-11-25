@@ -11,6 +11,8 @@ TagManager:
   - Gunner
   - Engineer
   - Node
+  - Anomaly
+  - Current Node
   layers:
   - Default
   - TransparentFX
