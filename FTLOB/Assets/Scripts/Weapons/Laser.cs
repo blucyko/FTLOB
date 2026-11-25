@@ -36,10 +36,10 @@ public class Laser : WeaponsTemplate
             GameObject newRadius = Instantiate(weaponRadius.gameObject, weaponRadius.position, weaponRadius.rotation);
 
             // // disables sprite for the current bullet's radius
-            // newRadius.GetComponent<SpriteRenderer>().enabled = false;
+            newRadius.GetComponent<SpriteRenderer>().enabled = false;
 
             // enables visibility of max bullet distance, CHANGE TO TRANSPARENT LATER
-            newRadius.GetComponent<SpriteRenderer>().color = Color.black; 
+            // newRadius.GetComponent<SpriteRenderer>().color = Color.black; 
 
             newRadius.SetActive(true);
             newBullet.GetComponent<LaserBullet>().SetBulletRadius(newRadius);
