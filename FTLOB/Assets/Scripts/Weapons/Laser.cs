@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.Universal;
 
 public class Laser : WeaponsTemplate
 {
@@ -12,22 +13,44 @@ public class Laser : WeaponsTemplate
     // [SerializeField] private GameObject bullet;
     [SerializeField] private float bulletSpread;
 
+    [SerializeField] private Coroutine activeCorountine;
+
     // Update is called once per frame
+
+    public bool isCoroutineActive()
+    {
+        return activeCorountine != null;
+    }
 
     public override void FireWeapon()
     {
-        StartCoroutine(BurstFire());
+        if(isCoroutineActive())
+        {
+            Debug.Log("I can't fire right now!");
+            return;
+        }
+        // SetIsFiring(true);
+        // SetIsReady(false);
+        activeCorountine = StartCoroutine(BurstFire());
     }
     public IEnumerator BurstFire()
     {
+
         SetIsFiring(true);
+        // if(!isFiring){
+        if(isCoroutineActive())
+        {
+            StopCoroutine(activeCorountine);
+        }
         Debug.Log("FIRIN MA LAYSA!!!");
         for(int i = 0; i < bulletNum; i++)
         {
+            // SetIsFiring(true);
             //instantiate laser
             Debug.Log("fired 1 laser!");
             GameObject newBullet = Instantiate(projectile, projectileSpawn.position, projectileSpawn.rotation);
             newBullet.transform.Rotate(new Vector3(0, 0, Random.Range(-1 * bulletSpread, bulletSpread)));
+            newBullet.GetComponent<LaserBullet>().SetEnemyTag(enemyTag);
             newBullet.GetComponent<LaserBullet>().SetBulletSpeed(bulletSpeed);
 
             // instantiates a new weapon radius, which the bullet will use to check if it is at the maximum range
@@ -51,6 +74,9 @@ public class Laser : WeaponsTemplate
         }
         SetIsFiring(false);
         SetCurrentRecharge(0);
+        StopCoroutine(activeCorountine);
+        activeCorountine = null;
+    // }
     }
 
 }

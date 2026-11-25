@@ -3560,6 +3560,7 @@ MonoBehaviour:
   currentRecharge: 0
   barrelSpeed: 0.5
   reticle: {fileID: 1571670648}
+  enemyTag: Enemy
   bulletNum: 10
   bulletDelay: 0.1
   bulletSpeed: 5
@@ -4624,6 +4625,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LaserBullet
   bulletSpeed: 0
   bulletRadius: {fileID: 0}
+  enemyTag: Enemy
 --- !u!58 &1415128039
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5550,7 +5552,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: c78c7fcd0bdd9654798cfe87dc25ea5d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5999999, g: 0.06679239, b: 0.06679239, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

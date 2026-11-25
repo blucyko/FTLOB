@@ -8,6 +8,7 @@ public class LaserBullet : MonoBehaviour
     [SerializeField] private float bulletSpeed = 0;
     // [SerializeField] private float maxRange = 20;
     [SerializeField] private GameObject bulletRadius;
+    [SerializeField] private string enemyTag = "Enemy";
     private Rigidbody2D rb;
 
     void OnEnable()
@@ -31,6 +32,11 @@ public class LaserBullet : MonoBehaviour
         bulletRadius = newRadius;
     }
 
+    public void SetEnemyTag(string newTag)
+    {
+        enemyTag = newTag;
+    }
+
     void OnTriggerExit2D(Collider2D collision)
     {
         Debug.Log("bullet exited radius!");
@@ -51,9 +57,9 @@ public class LaserBullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Enemy")
+        if(collision.gameObject.tag == enemyTag)
         {
-            Debug.Log("it's an enemy!");
+            // Debug.Log("it's an enemy!");
             collision.gameObject.GetComponent<Health>().Damage(1);
             Destroy(gameObject);
         }
