@@ -13,35 +13,36 @@ public class Laser : WeaponsTemplate
     // [SerializeField] private GameObject bullet;
     [SerializeField] private float bulletSpread;
 
-    [SerializeField] private Coroutine activeCorountine;
+    // [SerializeField] private Coroutine activeCorountine;
 
     // Update is called once per frame
 
-    public bool isCoroutineActive()
-    {
-        return activeCorountine != null;
-    }
+    // public bool isCoroutineActive()
+    // {
+    //     return activeCorountine != null;
+    // }
 
     public override void FireWeapon()
     {
-        if(isCoroutineActive())
-        {
-            Debug.Log("I can't fire right now!");
-            return;
-        }
+        // if(isCoroutineActive())
+        // {
+        //     Debug.Log("I can't fire right now!");
+        //     return;
+        // }
         // SetIsFiring(true);
         // SetIsReady(false);
-        activeCorountine = StartCoroutine(BurstFire());
+        // activeCorountine = StartCoroutine(BurstFire());
+        StartCoroutine(BurstFire());
     }
     public IEnumerator BurstFire()
     {
 
         SetIsFiring(true);
         // if(!isFiring){
-        if(isCoroutineActive())
-        {
-            StopCoroutine(activeCorountine);
-        }
+        // if(isCoroutineActive())
+        // {
+        //     StopCoroutine(activeCorountine);
+        // }
         Debug.Log("FIRIN MA LAYSA!!!");
         for(int i = 0; i < bulletNum; i++)
         {
@@ -74,8 +75,8 @@ public class Laser : WeaponsTemplate
         }
         SetIsFiring(false);
         SetCurrentRecharge(0);
-        StopCoroutine(activeCorountine);
-        activeCorountine = null;
+        // StopCoroutine(activeCorountine);
+        // activeCorountine = null;
     // }
     }
 

@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,6 +17,7 @@ public class EnemyTemplate : MonoBehaviour
         // {
         //     weaponReady.Add(false);
         // }
+        StartCoroutine(CycleWeapons());
     }
 
     // Update is called once per frame
@@ -37,9 +39,23 @@ public class EnemyTemplate : MonoBehaviour
         //     }
         // }
 
-        if(laser.GetIsReady() && !laser.GetIsFiring() && !laser.isCoroutineActive())
+        // if(laser.GetIsReady() && !laser.GetIsFiring() && !laser.isCoroutineActive())
+        // {
+        //     laser.FireWeapon();
+        // }
+    }
+
+    IEnumerator CycleWeapons()
+    {
+
+        yield return new WaitForSeconds(1.0f);
+        foreach(WeaponsTemplate w in weaponsList)
         {
-            laser.FireWeapon();
+            if(w.GetIsReady() && !w.GetIsFiring())
+            {
+                w.FireWeapon();
+            }
         }
+        StartCoroutine(CycleWeapons());
     }
 }
