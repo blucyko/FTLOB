@@ -14,7 +14,7 @@ public class ShipMovement : MonoBehaviour
     [SerializeField] private Vector2 moveVector = Vector2.zero;
 
     [SerializeField] private float moveThreshold = 0f;
-    // private Rigidbody2D rigidbody;
+    private Rigidbody2D rigidbody;
 
 
     private bool inCombatScreen = true;
@@ -25,7 +25,7 @@ public class ShipMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void OnEnable()
     {
-        // rigidbody = GetComponent<Rigidbody2D>();
+        rigidbody = GetComponent<Rigidbody2D>();
 
         // rigidbody.linearVelocity = Vector2.zero;
         moveSpeed = 0f;
@@ -50,7 +50,9 @@ public class ShipMovement : MonoBehaviour
         
         gameObject.transform.Rotate(0f, 0f, -1 * moveVector.x * turnSpeed * Time.deltaTime);
 
-        gameObject.transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+        rigidbody.AddForce(transform.right * moveSpeed * Time.deltaTime);
+
+        // gameObject.transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
     }
 
     public void ToggleInCombatScreen()

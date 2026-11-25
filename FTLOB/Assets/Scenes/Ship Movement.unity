@@ -273,10 +273,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShipMovement
   moveAction: {fileID: 7104130859835199754, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  maxSpeed: 30
+  maxSpeed: 100
   moveSpeed: 0
   accel: 30
-  turnSpeed: 5
+  turnSpeed: 30
   moveVector: {x: 0, y: 0}
   moveThreshold: 0
 --- !u!50 &5995050
@@ -393,7 +393,7 @@ Transform:
   m_GameObject: {fileID: 1670793627}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -50}
+  m_LocalPosition: {x: 0, y: 1, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
