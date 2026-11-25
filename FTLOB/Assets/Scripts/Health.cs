@@ -5,7 +5,7 @@ public class Health : MonoBehaviour
 {
     //[SerializeField] public Image healthBar;
     [SerializeField] public Image[] healthPoints;
-    [SerializeField] public float currentHealth, maxHealth = 25f; // In GDD health should be 25
+    [SerializeField] public int currentHealth, maxHealth = 25; // In GDD health should be 25
     public float lerpSpeed;
 
     void Start()
@@ -32,12 +32,12 @@ public class Health : MonoBehaviour
         }
     }
 
-    bool DisplayHealth(float _health, int point)
+    bool DisplayHealth(int _health, int point)
     {
         return ((point * 1) >= _health);
     }
 
-    public void Damage(float damagePoints)
+    public void Damage(int damagePoints)
     {
         if (currentHealth > 0)
         {
@@ -46,7 +46,7 @@ public class Health : MonoBehaviour
         }
     }
 
-    public void Heal(float healPoints)
+    public void Heal(int healPoints)
     {
         if (currentHealth < maxHealth)
         {

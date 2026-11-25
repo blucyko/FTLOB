@@ -37,6 +37,7 @@ public class Laser : WeaponsTemplate
 
             // // disables sprite for the current bullet's radius
             newRadius.GetComponent<SpriteRenderer>().enabled = false;
+            newRadius.GetComponent<CircleCollider2D>().enabled = true;
 
             // enables visibility of max bullet distance, CHANGE TO TRANSPARENT LATER
             // newRadius.GetComponent<SpriteRenderer>().color = Color.black; 

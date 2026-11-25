@@ -11,6 +11,7 @@ TagManager:
   - Gunner
   - Engineer
   - Node
+  - Enemy
   layers:
   - Default
   - TransparentFX

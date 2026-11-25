@@ -38,9 +38,24 @@ public class LaserBullet : MonoBehaviour
         // if (collision.gameObject.tag.Equals("weapon radius"))
         if (collision.gameObject == bulletRadius)
         {
-            Debug.Log("destroy!");
-            Destroy(bulletRadius);
-            Destroy(this.gameObject);
+            DestroyBullet();
+        }
+    }
+
+    void DestroyBullet()
+    {
+        Debug.Log("destroy!");
+        Destroy(bulletRadius);
+        Destroy(this.gameObject);
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Enemy")
+        {
+            Debug.Log("it's an enemy!");
+            collision.gameObject.GetComponent<Health>().Damage(1);
+            Destroy(gameObject);
         }
     }
 }
