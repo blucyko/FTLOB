@@ -88,7 +88,7 @@ public class WeaponsTemplate : SystemsTemplate
 
     protected void Awake()
     {
-        reticle.SetActive(true);
+        if(reticle != null) reticle.SetActive(true);
         cam = Camera.main;
         SetPreferredCrew(1);
 
@@ -118,7 +118,7 @@ public class WeaponsTemplate : SystemsTemplate
         BarrelLookAtMouse();
 
         // changes the position of the reticle to the target position
-        reticle.transform.position = lastMousePos;
+        if(reticle != null) reticle.transform.position = lastMousePos;
         UpdateRecharge();
     }
 

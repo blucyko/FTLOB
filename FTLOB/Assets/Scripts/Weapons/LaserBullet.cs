@@ -39,8 +39,8 @@ public class LaserBullet : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("bullet exited radius!");
-        Debug.Log("tag of radius is: " + collision.gameObject.tag);
+        // Debug.Log("bullet exited radius!");
+        // Debug.Log("tag of radius is: " + collision.gameObject.tag);
         // if (collision.gameObject.tag.Equals("weapon radius"))
         if (collision.gameObject == bulletRadius)
         {
@@ -57,10 +57,11 @@ public class LaserBullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == enemyTag)
+        RoomHealth damagedRoom = collision.gameObject.GetComponent<RoomHealth>();
+        if(collision.gameObject.tag == enemyTag && damagedRoom != null)
         {
             // Debug.Log("it's an enemy!");
-            collision.gameObject.GetComponent<Health>().Damage(1);
+            damagedRoom.Damage(1);
             Destroy(gameObject);
         }
     }
