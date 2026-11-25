@@ -5031,6 +5031,7 @@ MonoBehaviour:
   currentRecharge: 0
   barrelSpeed: 0.5
   reticle: {fileID: 10221857}
+  enemyTag: Enemy
   bulletNum: 10
   bulletDelay: 0.1
   bulletSpeed: 5
@@ -8489,7 +8490,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1058026045
 Transform:
   m_ObjectHideFlags: 0
@@ -8804,6 +8805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LaserBullet
   bulletSpeed: 0
   bulletRadius: {fileID: 0}
+  enemyTag: Enemy
 --- !u!58 &1101871376
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9234,7 +9236,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1189854555
 Transform:
   m_ObjectHideFlags: 0
@@ -9547,7 +9549,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1233145183
 Transform:
   m_ObjectHideFlags: 0
@@ -12857,7 +12859,7 @@ MonoBehaviour:
   - {fileID: 1187341898}
   - {fileID: 721038291}
   - {fileID: 80708690}
-  currentHealth: 25
+  currentHealth: 0
   maxHealth: 25
   lerpSpeed: 0
 --- !u!114 &1490689394
