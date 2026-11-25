@@ -7574,7 +7574,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d1bf055aad56fa7408ee8ef1d1650c06, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 28e140a97266aeb43b16b5dc5e227d84, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9373,7 +9373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1189854555
 Transform:
   m_ObjectHideFlags: 0
@@ -10058,11 +10058,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1490689393}
         m_TargetAssemblyTypeName: Health, Assembly-CSharp
         m_MethodName: Damage
-        m_Mode: 4
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 1
           m_StringArgument: 
           m_BoolArgument: 0
@@ -13694,11 +13694,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1490689393}
         m_TargetAssemblyTypeName: Health, Assembly-CSharp
         m_MethodName: Heal
-        m_Mode: 4
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 1
           m_StringArgument: 
           m_BoolArgument: 0
@@ -16953,20 +16953,20 @@ MonoBehaviour:
   textComponent: {fileID: 28472003}
   text: {fileID: 28472001}
   lines:
-  - 'Hey, where did all the stars go?  Wait, is the darkness moving? '
-  - "Hate to break it to ya kid, but that ain\u2019t just darkness. We\u2019re in the belly of the beast now. "
-  - "Hah. Never thought I\u2019d die from suffocation by calamari. "
-  - ...
-  - "Ghek! You mean\u2026 all the stuff outside is\u2026! Blehhh!!!"
-  - "Oi, I just finished polishin\u2019 the floor. You\u2019ll jam the trapdoor I put down \u2018ere. "
-  - ...
-  - "!!! \u2026 \u2026"
-  - "Haa, haa\u2026 hm? Tea? Thanks\u2026"
-  - "[Sip] Hmm\u2026 Sweet, aromatic, quite a nice taste. What blend \u2018o herbs is this? I might hafta mix this into my \u2018mergency rations."
-  - ...
-  - "[Sip] Phew, that sure takes the edge off. It's been a while since I\u2019ve felt this nice honestly. Considering what we\u2019re about to get into\u2026"
-  - ;p
-  - ...
+  - 'Hey, where did all the stars go?  Wait, is the darkness moving? [Press Z] '
+  - "Hate to break it to ya kid, but that ain\u2019t just darkness. We\u2019re in the belly of the beast now. [Press Z] "
+  - "Hah. Never thought I\u2019d die from suffocation by calamari. [Press Z] "
+  - '... [Press Z]'
+  - "Ghek! You mean\u2026 all the stuff outside is\u2026! Blehhh!!! [Press Z]"
+  - "Oi, I just finished polishin\u2019 the floor. You\u2019ll jam the trapdoor I put down \u2018ere. [Press Z] "
+  - '... [Press Z]'
+  - "!!! \u2026 \u2026 [Press Z]"
+  - "Haa, haa\u2026 hm? Tea? Thanks\u2026 [Press Z]"
+  - "[Sip] Hmm\u2026 Sweet, aromatic, quite a nice taste. What blend \u2018o herbs is this? I might hafta mix this into my \u2018mergency rations. [Press Z]"
+  - '... [Press Z]'
+  - "[Sip] Phew, that sure takes the edge off. It's been a while since I\u2019ve felt this nice honestly. Considering what we\u2019re about to get into\u2026 [Press Z]"
+  - ';p [Press Z]'
+  - '... [Press Z]'
   textSpeed: 0.03
   continueDialogue: {fileID: -6941321626574738206, guid: 052faaac586de48259a63d0c4782560b, type: 3}
 --- !u!1 &2090106594
