@@ -6,10 +6,7 @@ public class Movement : MonoBehaviour
 {
     private enum FacingDirection
     {
-        Up,
-        Down,
-        Left,
-        Right
+        Up, Down, Left, Right
     }
 
     [Header("Movement")]
@@ -18,8 +15,8 @@ public class Movement : MonoBehaviour
 
     [Header("Animation")]
     [SerializeField] private Animator _animator;
-    [SerializeField] private SpriteRenderer _spriteRenderer;
-    [SerializeField] private Transform _spriteTransform;
+    [SerializeField] private string moveX = "MoveX";
+    [SerializeField] private string moveY = "MoveY";
 
     private readonly Queue<Vector3> pathQueue = new Queue<Vector3>();
     private Rigidbody2D rb;
@@ -104,38 +101,32 @@ public class Movement : MonoBehaviour
 
     private void ApplyFacingDirection()
     {
+        Vector2 moveDirection = Vector2.zero;
+
         switch (facingDirection)
         {
             case FacingDirection.Down:
-                _spriteTransform.localRotation = Quaternion.Euler(0f, 0f, 0f);
-                _spriteRenderer.flipX = false;
-                _spriteRenderer.flipY = false;
+                moveDirection = Vector2.down;
                 break;
             case FacingDirection.Up:
-                _spriteTransform.localRotation = Quaternion.Euler(0f, 0f, 0f);
-                _spriteRenderer.flipX = false;
-                _spriteRenderer.flipY = true;
+                moveDirection = Vector2.up;
                 break;
             case FacingDirection.Left:
-                // Rotate the sprite so it appears as facing left
-                _spriteTransform.localRotation = Quaternion.Euler(0f, 0f, -90f);
-                _spriteRenderer.flipX = false;
-                _spriteRenderer.flipY = false;
+                moveDirection = Vector2.left;
                 break;
             case FacingDirection.Right:
-                // Rotate the sprite so it appears as facing right
-                _spriteTransform.localRotation = Quaternion.Euler(0f, 0f, 90f);
-                _spriteRenderer.flipX = false;
-                _spriteRenderer.flipY = false;
+                moveDirection = Vector2.right;
                 break;
         }
+        // Send facing direction to blend tree
+        _animator.SetFloat(moveX, moveDirection.x);
+        _animator.SetFloat(moveY, moveDirection.y);
     }
     private void UpdateAnimation()
     {
         bool walking = IsMoving;
 
         _animator.SetBool("IsWalking", walking);
-        _animator.SetBool("IsIdle", !walking);
     }
 
     private void OnDrawGizmosSelected()

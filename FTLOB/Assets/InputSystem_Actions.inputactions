@@ -598,6 +598,16 @@
                     "interactions": "",
                     "initialStateCheck": false,
                     "priority": 0
+                },
+                {
+                    "name": "Dialogue",
+                    "type": "Button",
+                    "id": "fdc8e288-a07d-4b08-b968-2c73c425dd3c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
                 }
             ],
             "bindings": [
@@ -1027,6 +1037,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Toggle Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "17608545-4114-4429-9a3a-92ba611cac03",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dialogue",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
