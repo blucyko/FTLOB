@@ -132,7 +132,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 160
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -154,7 +154,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 160
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -165,8 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca88c77813577514da857682d2b9dd3a
-      internalID: -1719692263
+      spriteID: cb5d48a62957b5849a9fdb49dbc9bf59
+      internalID: -1529528738
       vertices: []
       indices: 
       edges: []
@@ -176,7 +176,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 160
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bca65a5949d7d847beaa5c6905926c5
-      internalID: -652633821
+      spriteID: 28154d04324c49e43ae8a113c34ca754
+      internalID: 1282838194
       vertices: []
       indices: 
       edges: []
@@ -198,7 +198,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 160
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -209,8 +209,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c377727ce9e5084db8069f954057c3a
-      internalID: -356884988
+      spriteID: f878fc21dbddd194dbcca7cd806668e7
+      internalID: -2139472489
       vertices: []
       indices: 
       edges: []
@@ -220,7 +220,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 160
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -231,8 +231,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebaf300cc1775324ab3ba706aa224eb7
-      internalID: -291273598
+      spriteID: 65b47f6c481424e47a1ab3ffc974a745
+      internalID: -756697811
       vertices: []
       indices: 
       edges: []
@@ -242,6 +242,28 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 926bf923c5474234ca66843ac47a0aae
+      internalID: -1888596087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_doors_temp_6
+      rect:
+        serializedVersion: 2
+        x: 64
         y: 160
         width: 32
         height: 32
@@ -253,30 +275,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7163ecb132c4dd4a904084cbba282aa
-      internalID: -2042335993
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_doors_temp_6
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5f61ad2817e702c44a8b02f8ccb75efd
-      internalID: 435316504
+      spriteID: 16e23f2c3c8b4e84588c8c0ea442fd66
+      internalID: -694558211
       vertices: []
       indices: 
       edges: []
@@ -286,7 +286,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 128
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -297,8 +297,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 796d8a146e2fa204a9fc56d0f8a6a3a5
-      internalID: 67795160
+      spriteID: ad3b3e365ff26844c85fdf5d1195fd13
+      internalID: -226463270
       vertices: []
       indices: 
       edges: []
@@ -308,7 +308,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 128
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -319,8 +319,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c427cf1fadd8a34085a4f432e714507
-      internalID: 1736394277
+      spriteID: 865fa5aedd2c8f94aba5c03a3695b31c
+      internalID: 1739590476
       vertices: []
       indices: 
       edges: []
@@ -330,7 +330,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 288
-        y: 128
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -341,8 +341,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31a52f042d066124cac769714a1b3133
-      internalID: -1637520179
+      spriteID: f4f9f2905230c3a48aaf2492c8f84349
+      internalID: -1452141694
       vertices: []
       indices: 
       edges: []
@@ -352,6 +352,28 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 320
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abfc0d60406d9d44e8164fd9b332aeda
+      internalID: 30185611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_doors_temp_11
+      rect:
+        serializedVersion: 2
+        x: 64
         y: 128
         width: 32
         height: 32
@@ -363,30 +385,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e189125ce603ef045b0dabc801835c41
-      internalID: 1668410057
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_doors_temp_11
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9d35c9aa297b91446bab409d46f2aa7b
-      internalID: -1961595235
+      spriteID: 1d638444880fc6145bc29a70a81921dd
+      internalID: -1192532258
       vertices: []
       indices: 
       edges: []
@@ -396,7 +396,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 96
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -407,8 +407,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6fcab141ba649da458bdff61dcb0ec83
-      internalID: -871957239
+      spriteID: 072361680204f6c408661cf1988870c9
+      internalID: -1278781927
       vertices: []
       indices: 
       edges: []
@@ -418,7 +418,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 96
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -429,8 +429,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38c2e0a2d43ff7c469881dce4a493089
-      internalID: 1873702592
+      spriteID: 7ded3a18f8684e34e8b017504d7dd14f
+      internalID: -1584686458
       vertices: []
       indices: 
       edges: []
@@ -440,7 +440,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 288
-        y: 96
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -451,8 +451,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a353e8a5f8963a469e23ce17005ea52
-      internalID: -1264022094
+      spriteID: ef32a5952792ade4086bd86f1ff4265f
+      internalID: -691216955
       vertices: []
       indices: 
       edges: []
@@ -462,6 +462,28 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 320
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b267437404e0ac468c8f43524a7f763
+      internalID: 1787620448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_doors_temp_16
+      rect:
+        serializedVersion: 2
+        x: 64
         y: 96
         width: 32
         height: 32
@@ -473,30 +495,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13c4a867f3b4063449fff79ec56183ba
-      internalID: 1998747050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_doors_temp_16
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9653796821f0d7748afbf59fbb7363f6
-      internalID: -679930452
+      spriteID: 25f5b0168a69e8147a93ca4962910a21
+      internalID: -2077717569
       vertices: []
       indices: 
       edges: []
@@ -506,7 +506,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 64
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -517,8 +517,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f895d66130101847a1a1545a3c0b5fd
-      internalID: -309898043
+      spriteID: eba9148bd16290641ab4054335c5a720
+      internalID: -1767075435
       vertices: []
       indices: 
       edges: []
@@ -528,7 +528,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 64
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -539,8 +539,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a60c66679a6a824bb0995fe9a9eeffc
-      internalID: 49123996
+      spriteID: 3f7ebf4fca3edbf4e91d4739d33ffcda
+      internalID: -1394821872
       vertices: []
       indices: 
       edges: []
@@ -550,7 +550,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 64
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -561,8 +561,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 318a23c2436d977429c2f283428475bb
-      internalID: 1209685845
+      spriteID: 4d63b4f9cfc82ff4a8d0178a6ca8e332
+      internalID: 448518892
       vertices: []
       indices: 
       edges: []
@@ -572,7 +572,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 64
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -583,8 +583,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0b33d75bb62dba45b015b22075ae54e
-      internalID: -1117837917
+      spriteID: c61fdfd644204344a9f936e5c8bf00b0
+      internalID: -1261388074
       vertices: []
       indices: 
       edges: []
@@ -594,7 +594,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 64
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -605,8 +605,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1e068f11c5262344b1369368f5cc951
-      internalID: -776126303
+      spriteID: 2fc353747b1e83142a4e732f10fe26ef
+      internalID: -583771074
       vertices: []
       indices: 
       edges: []
@@ -628,27 +628,27 @@ TextureImporter:
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       ship_doors_temp_0: 4565290799107303856
-      ship_doors_temp_1: -1719692263
-      ship_doors_temp_10: 1668410057
-      ship_doors_temp_11: -1961595235
-      ship_doors_temp_12: -871957239
-      ship_doors_temp_13: 1873702592
-      ship_doors_temp_14: -1264022094
-      ship_doors_temp_15: 1998747050
-      ship_doors_temp_16: -679930452
-      ship_doors_temp_17: -309898043
-      ship_doors_temp_18: 49123996
-      ship_doors_temp_19: 1209685845
-      ship_doors_temp_2: -652633821
-      ship_doors_temp_20: -1117837917
-      ship_doors_temp_21: -776126303
-      ship_doors_temp_3: -356884988
-      ship_doors_temp_4: -291273598
-      ship_doors_temp_5: -2042335993
-      ship_doors_temp_6: 435316504
-      ship_doors_temp_7: 67795160
-      ship_doors_temp_8: 1736394277
-      ship_doors_temp_9: -1637520179
+      ship_doors_temp_1: -1529528738
+      ship_doors_temp_10: 30185611
+      ship_doors_temp_11: -1192532258
+      ship_doors_temp_12: -1278781927
+      ship_doors_temp_13: -1584686458
+      ship_doors_temp_14: -691216955
+      ship_doors_temp_15: 1787620448
+      ship_doors_temp_16: -2077717569
+      ship_doors_temp_17: -1767075435
+      ship_doors_temp_18: -1394821872
+      ship_doors_temp_19: 448518892
+      ship_doors_temp_2: 1282838194
+      ship_doors_temp_20: -1261388074
+      ship_doors_temp_21: -583771074
+      ship_doors_temp_3: -2139472489
+      ship_doors_temp_4: -756697811
+      ship_doors_temp_5: -1888596087
+      ship_doors_temp_6: -694558211
+      ship_doors_temp_7: -226463270
+      ship_doors_temp_8: 1739590476
+      ship_doors_temp_9: -1452141694
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

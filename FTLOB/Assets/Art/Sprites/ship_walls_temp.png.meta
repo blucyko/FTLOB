@@ -132,7 +132,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 224
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -141,9 +141,9 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: 16, y: -9}
-        - {x: 13, y: -9}
-        - {x: 10, y: -12}
+      - - {x: 16, y: -10}
+        - {x: 13, y: -10}
+        - {x: 10, y: -13}
         - {x: 10, y: -16}
         - {x: 16, y: -16}
       tessellationDetail: 0
@@ -159,6 +159,85 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -10}
+        - {x: -16, y: -10}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67bdb93d080705148a058a18ea0f3aa9
+      internalID: 346674136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -10}
+        - {x: -16, y: -10}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad68ed72e2013544c809ecada79b7bae
+      internalID: -537442566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: -13}
+        - {x: -11, y: -10}
+        - {x: -16, y: -10}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60a4ad5e78aa9c247aa1d75aa6a7b93d
+      internalID: -2124104832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_4
+      rect:
+        serializedVersion: 2
+        x: 32
         y: 224
         width: 32
         height: 32
@@ -168,20 +247,103 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: 16, y: -9}
-        - {x: -16, y: -9}
-        - {x: -16, y: -16}
+      - - {x: 16, y: -10}
+        - {x: 13, y: -10}
+        - {x: 10, y: -13}
+        - {x: 10, y: -16}
         - {x: 16, y: -16}
       tessellationDetail: 0
       bones: []
-      spriteID: 7d82d44750eb31047b6f5d26702cb154
-      internalID: 1162613802
+      spriteID: 8f69f45d9373a4b49a3f3bb418d9462b
+      internalID: -1957870923
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_walls_temp_2
+      name: ship_walls_temp_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -10}
+        - {x: -16, y: -10}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd30067851e82247844b7eda5a40aa5
+      internalID: -474837507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: 10, y: 16}
+        - {x: 10, y: -10}
+        - {x: -16, y: -10}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8892142941254c042aaa957433ff0655
+      internalID: 1554668709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -14, y: 14}
+        - {x: 16, y: 14}
+        - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: -14, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e94f6fd928262a49a626a461928e723
+      internalID: 1406507176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_8
       rect:
         serializedVersion: 2
         x: 160
@@ -194,20 +356,20 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: 16, y: -9}
-        - {x: -16, y: -9}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
+      - - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 14}
+        - {x: 16, y: 14}
       tessellationDetail: 0
       bones: []
-      spriteID: 69dad44ccf33283499bd3213078cced7
-      internalID: -1678494729
+      spriteID: 75cc00b02e2b0b740a1d02eb57c416f3
+      internalID: 1878365092
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_walls_temp_3
+      name: ship_walls_temp_9
       rect:
         serializedVersion: 2
         x: 192
@@ -220,77 +382,211 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: -10, y: -12}
-        - {x: -13, y: -9}
-        - {x: -16, y: -9}
+      - - {x: 16, y: -10}
+        - {x: -8, y: -10}
+        - {x: -8, y: 16}
+        - {x: -16, y: 16}
         - {x: -16, y: -16}
-        - {x: -10, y: -16}
+        - {x: 16, y: -16}
       tessellationDetail: 0
       bones: []
-      spriteID: bb6969eba6bf819479aa5c8a941cefeb
-      internalID: -1431286393
+      spriteID: c71107e90dd279940b3daa3c9a983edf
+      internalID: 1169035525
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_walls_temp_4
+      name: ship_walls_temp_10
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -10}
+        - {x: -16, y: -10}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 500b76cef891bb342bba4d5109b35bee
+      internalID: 1235218916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_11
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -10}
+        - {x: -16, y: -10}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c4108463cb3c75479e31676897b2d54
+      internalID: 342833586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_12
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: -13}
+        - {x: -11, y: -10}
+        - {x: -16, y: -10}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53b0b5df288ac894b91abe72ecde882a
+      internalID: -889066414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_13
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -10}
+        - {x: 13, y: -10}
+        - {x: 10, y: -13}
+        - {x: 10, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 992e07b84f366da4b853d576618ab67f
+      internalID: 213613672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_14
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -10}
+        - {x: -16, y: -10}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77c06c7903e8c6d41980120b600e842d
+      internalID: -1801598576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_15
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: -13}
+        - {x: -11, y: -10}
+        - {x: -16, y: -10}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c4cd7ea91d25cc4cb6f0bc37893c17e
+      internalID: 530825065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -10}
+        - {x: 13, y: -10}
+        - {x: 10, y: -13}
+        - {x: 10, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1afe4166bf77c1c42bb52d1cf773c567
+      internalID: -1546000509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_17
       rect:
         serializedVersion: 2
         x: 32
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: -9}
-        - {x: 12, y: -9}
-        - {x: 9, y: -12}
-        - {x: 9, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b0fe31ea54df4b41869c8d3a53983ee
-      internalID: 1335246070
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_5
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: -9}
-        - {x: -16, y: -9}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: b85c32f41f42a5c44969f4df6c0741aa
-      internalID: -1122120564
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_6
-      rect:
-        serializedVersion: 2
-        x: 96
         y: 192
         width: 32
         height: 32
@@ -302,312 +598,14 @@ TextureImporter:
       physicsShape:
       - - {x: 16, y: 16}
         - {x: 10, y: 16}
-        - {x: 10, y: -9}
-        - {x: -16, y: -9}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: b9d2afef6528d304c8d9a5b0d9074b63
-      internalID: -1906481096
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_7
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: -14, y: 15}
-        - {x: 16, y: 15}
-        - {x: 16, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: -14, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: a7293dc9dee3da9498753ad9bf5467cc
-      internalID: -1644722839
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_8
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: 15}
-        - {x: 14, y: 15}
-        - {x: 14, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: bcf229554738d5a48baa877156fc2896
-      internalID: 1852889214
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_9
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: -9}
-        - {x: -10, y: -9}
-        - {x: -10, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0ea5666817e2d5f4481249b0b9f5b396
-      internalID: 57224990
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_10
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: -9}
-        - {x: -16, y: -9}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01bc64f06dd02b2448cb22cae92938e4
-      internalID: 900576988
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_11
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: -9}
-        - {x: -16, y: -9}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d18b4b72db285242872de0d3fddf641
-      internalID: 1780681683
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_12
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: -10, y: -12}
-        - {x: -13, y: -9}
-        - {x: -16, y: -9}
-        - {x: -16, y: -16}
-        - {x: -10, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 86f3841406d1ed94f93f891ad1e30e62
-      internalID: 267408438
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_13
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: -9}
-        - {x: 12, y: -9}
-        - {x: 9, y: -12}
-        - {x: 9, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5555fc52ac4d9104f8ff0eb74278d094
-      internalID: 30170420
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_14
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: -9}
-        - {x: -16, y: -9}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: d4c2bc4536e1508419b05174772db926
-      internalID: -1784150528
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_15
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 192
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: -9, y: -12}
-        - {x: -12, y: -9}
-        - {x: -16, y: -9}
-        - {x: -16, y: -16}
-        - {x: -9, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: bbcc261c4363b784d832c819f62283c4
-      internalID: 1559833141
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_16
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: -10}
-        - {x: 12, y: -10}
-        - {x: 9, y: -13}
-        - {x: 9, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: bcd571948065a914392bcb8a460d3e41
-      internalID: -391948532
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_17
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: 9, y: 16}
         - {x: 10, y: -10}
         - {x: -16, y: -10}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
       tessellationDetail: 0
       bones: []
-      spriteID: 51931f7aa236fd348b7d539bf44afcaa
-      internalID: 289407572
+      spriteID: 8a4198f650e691b4c8782be7d2a42558
+      internalID: 1753265740
       vertices: []
       indices: 
       edges: []
@@ -617,7 +615,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 160
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -626,22 +624,22 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: -14, y: -14}
-        - {x: -15, y: -14}
-        - {x: -15, y: 15}
-        - {x: 16, y: 15}
+      - - {x: -13, y: -14}
+        - {x: -14, y: -14}
+        - {x: -14, y: 14}
+        - {x: 16, y: 14}
         - {x: 16, y: 16}
         - {x: -16, y: 16}
         - {x: -16, y: -16}
-        - {x: -14, y: -16}
+        - {x: -13, y: -16}
       - - {x: 16, y: -14}
-        - {x: 4, y: -14}
-        - {x: 4, y: -16}
+        - {x: 5, y: -14}
+        - {x: 5, y: -16}
         - {x: 16, y: -16}
       tessellationDetail: 0
       bones: []
-      spriteID: 7fe0c151ebb863d4e9a6d966d3f10c07
-      internalID: 747246558
+      spriteID: a9c0cdf6a8096724b9ac20852f84c505
+      internalID: 1110538485
       vertices: []
       indices: 
       edges: []
@@ -651,7 +649,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 160
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -662,10 +660,10 @@ TextureImporter:
       physicsShape:
       - - {x: 16, y: 16}
         - {x: -16, y: 16}
-        - {x: -16, y: 15}
-        - {x: 14, y: 15}
-        - {x: 14, y: 9}
-        - {x: 16, y: 9}
+        - {x: -16, y: 14}
+        - {x: 14, y: 14}
+        - {x: 14, y: 8}
+        - {x: 16, y: 8}
       - - {x: 16, y: -9}
         - {x: 14, y: -9}
         - {x: 14, y: -14}
@@ -674,8 +672,8 @@ TextureImporter:
         - {x: 16, y: -16}
       tessellationDetail: 0
       bones: []
-      spriteID: 77ea111701e306a459e4d8b6ca3b27c0
-      internalID: 875216110
+      spriteID: a981b707931ea67449f6646cd08453e1
+      internalID: -941587150
       vertices: []
       indices: 
       edges: []
@@ -685,7 +683,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 160
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -696,8 +694,8 @@ TextureImporter:
       physicsShape:
       - - {x: -14, y: 16}
         - {x: -16, y: 16}
-        - {x: -16, y: 9}
-        - {x: -14, y: 9}
+        - {x: -16, y: 8}
+        - {x: -14, y: 8}
       - - {x: 16, y: -14}
         - {x: -14, y: -14}
         - {x: -14, y: -9}
@@ -706,8 +704,8 @@ TextureImporter:
         - {x: 16, y: -16}
       tessellationDetail: 0
       bones: []
-      spriteID: 325f8e260336f624c951685b481786c2
-      internalID: 1535375663
+      spriteID: 1d9a3dfa26c4a7842845d1aee578baba
+      internalID: 255966051
       vertices: []
       indices: 
       edges: []
@@ -717,7 +715,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 160
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -726,24 +724,18 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: 16, y: 16}
-        - {x: 14, y: 16}
-        - {x: 14, y: 9}
-        - {x: 16, y: 9}
-      - - {x: 16, y: -9}
-        - {x: 14, y: -9}
-        - {x: 14, y: -14}
-        - {x: 9, y: -14}
-        - {x: 9, y: -16}
-        - {x: 16, y: -16}
-      - - {x: -10, y: -14}
+      - - {x: -9, y: -14}
         - {x: -16, y: -14}
         - {x: -16, y: -16}
-        - {x: -10, y: -16}
+        - {x: -9, y: -16}
+      - - {x: 16, y: -14}
+        - {x: 10, y: -14}
+        - {x: 10, y: -16}
+        - {x: 16, y: -16}
       tessellationDetail: 0
       bones: []
-      spriteID: 3e7f39e70ccd3614fa2a98740fdaae43
-      internalID: 323953748
+      spriteID: 190138af4b5aece4c8be21211e3c6ff3
+      internalID: 1722171876
       vertices: []
       indices: 
       edges: []
@@ -753,7 +745,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 192
-        y: 160
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -762,22 +754,22 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: -14, y: 15}
-        - {x: 16, y: 15}
+      - - {x: -12, y: 14}
+        - {x: 16, y: 14}
         - {x: 16, y: 16}
         - {x: -16, y: 16}
-        - {x: -16, y: 9}
-        - {x: -14, y: 9}
+        - {x: -16, y: 8}
+        - {x: -12, y: 8}
       - - {x: 16, y: -14}
-        - {x: -14, y: -14}
-        - {x: -14, y: -9}
+        - {x: -12, y: -14}
+        - {x: -12, y: -9}
         - {x: -16, y: -9}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
       tessellationDetail: 0
       bones: []
-      spriteID: 240cb11730e96d74a8bc9a866f928f0b
-      internalID: -339911883
+      spriteID: 014a7f908602ade409faefd1973d00bf
+      internalID: -616741039
       vertices: []
       indices: 
       edges: []
@@ -787,7 +779,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 224
-        y: 160
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -798,16 +790,16 @@ TextureImporter:
       physicsShape:
       - - {x: 16, y: 16}
         - {x: -16, y: 16}
-        - {x: -16, y: 15}
-        - {x: 16, y: 15}
+        - {x: -16, y: 14}
+        - {x: 16, y: 14}
       - - {x: 16, y: -14}
         - {x: -16, y: -14}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
       tessellationDetail: 0
       bones: []
-      spriteID: 00a79d8c01161124db0543de16267a82
-      internalID: -1506189720
+      spriteID: 75c564c4d9a263d49bf0cbbca3a2bba2
+      internalID: -1860275935
       vertices: []
       indices: 
       edges: []
@@ -817,7 +809,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 160
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -828,20 +820,20 @@ TextureImporter:
       physicsShape:
       - - {x: 16, y: 16}
         - {x: -16, y: 16}
-        - {x: -16, y: 15}
-        - {x: 14, y: 15}
-        - {x: 14, y: -14}
-        - {x: 9, y: -14}
-        - {x: 9, y: -16}
-        - {x: 16, y: -16}
-      - - {x: -10, y: -14}
+        - {x: -16, y: 14}
+        - {x: 16, y: 14}
+      - - {x: -9, y: -14}
         - {x: -16, y: -14}
         - {x: -16, y: -16}
-        - {x: -10, y: -16}
+        - {x: -9, y: -16}
+      - - {x: 16, y: -14}
+        - {x: 10, y: -14}
+        - {x: 10, y: -16}
+        - {x: 16, y: -16}
       tessellationDetail: 0
       bones: []
-      spriteID: ef27ad44160555f4da276a67080dc97f
-      internalID: 1192767486
+      spriteID: cbe7f0c733055b84898f08d8bca102f2
+      internalID: -1358708508
       vertices: []
       indices: 
       edges: []
@@ -851,7 +843,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 288
-        y: 160
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -861,15 +853,15 @@ TextureImporter:
       outline: []
       physicsShape:
       - - {x: 16, y: -10}
-        - {x: -10, y: -10}
-        - {x: -10, y: 16}
+        - {x: -8, y: -10}
+        - {x: -8, y: 16}
         - {x: -16, y: 16}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
       tessellationDetail: 0
       bones: []
-      spriteID: 377b4659a507d404abaeedc3f61ff89b
-      internalID: -135610472
+      spriteID: c96ba94bbffb0b64187ffdc8789e1fe8
+      internalID: -980018011
       vertices: []
       indices: 
       edges: []
@@ -879,7 +871,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 320
-        y: 160
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -889,15 +881,15 @@ TextureImporter:
       outline: []
       physicsShape:
       - - {x: 16, y: 16}
-        - {x: 9, y: 16}
-        - {x: 9, y: -10}
+        - {x: 10, y: 16}
+        - {x: 10, y: -10}
         - {x: -16, y: -10}
         - {x: -16, y: -16}
         - {x: 16, y: -16}
       tessellationDetail: 0
       bones: []
-      spriteID: 6d3e70400db8a464cbe331c67c7d9950
-      internalID: -156322747
+      spriteID: 87c0675e705e4e346b87dd2ddde5fb63
+      internalID: 1014459452
       vertices: []
       indices: 
       edges: []
@@ -907,174 +899,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 352
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 49b0568917103cc4d90e0fc4cef6e75d
-      internalID: 317041808
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_28
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: -9}
-        - {x: -9, y: -9}
-        - {x: -9, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 26f63da2100807843ae9463500d59fa9
-      internalID: 902896620
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_29
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: -9, y: -12}
-        - {x: -12, y: -9}
-        - {x: -16, y: -9}
-        - {x: -16, y: -16}
-        - {x: -9, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1ff362617408adb43bcbd5ea4c9af0da
-      internalID: 508323145
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_30
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: 9, y: 16}
-        - {x: 9, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 26ab6be476bd5394899d9a500cd07a83
-      internalID: 22076717
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_31
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: -15, y: 14}
-        - {x: 16, y: 14}
-        - {x: 16, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: -15, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: e5888fc46efed2f468eb391b30e55aa2
-      internalID: 997534189
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_32
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: 4, y: 16}
-        - {x: 4, y: 14}
-        - {x: 14, y: 14}
-        - {x: 14, y: -16}
-        - {x: 16, y: -16}
-      - - {x: -14, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: 14}
-        - {x: -14, y: 14}
-      tessellationDetail: 0
-      bones: []
-      spriteID: a89452cbab3a0f14f9f80f03a2faef73
-      internalID: -181339727
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_33
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 128
+        y: 192
         width: 32
         height: 32
       alignment: 0
@@ -1091,18 +916,73 @@ TextureImporter:
         - {x: -14, y: -16}
       tessellationDetail: 0
       bones: []
-      spriteID: 1d3cadbd1557b3341b13795eeccfb33c
-      internalID: -1326164025
+      spriteID: c0ba29566514d4d47b335d20861192bc
+      internalID: -378278759
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_walls_temp_34
+      name: ship_walls_temp_28
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
+        x: 384
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -10}
+        - {x: -8, y: -10}
+        - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b0e57c00f05dd4ca444946eaac3d7e
+      internalID: -2044896694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_29
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: -13}
+        - {x: -11, y: -10}
+        - {x: -16, y: -10}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ecb13b75a64c72469068681c8a7e7d0
+      internalID: -513802532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -1112,167 +992,23 @@ TextureImporter:
       outline: []
       physicsShape:
       - - {x: 16, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: 14}
-        - {x: 16, y: 14}
+        - {x: 10, y: 16}
+        - {x: 10, y: -16}
+        - {x: 16, y: -16}
       tessellationDetail: 0
       bones: []
-      spriteID: 4d31b51677a09e04db559a3077c2b2eb
-      internalID: -1293740971
+      spriteID: f10cf316eb497d944b575fd1710af8ab
+      internalID: -691734194
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_walls_temp_35
+      name: ship_walls_temp_31
       rect:
         serializedVersion: 2
-        x: 160
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: -10, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: 14}
-        - {x: -10, y: 14}
-      - - {x: 16, y: 16}
-        - {x: 9, y: 16}
-        - {x: 9, y: 14}
-        - {x: 16, y: 14}
-      tessellationDetail: 0
-      bones: []
-      spriteID: bc1290af4263edc4e9ce855e5e870c2d
-      internalID: 2144267864
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_36
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: 14}
-        - {x: 16, y: 14}
-      tessellationDetail: 0
-      bones: []
-      spriteID: fab4d33af4f6b5f4586500799156c66c
-      internalID: 1701948668
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_37
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: 14}
-        - {x: 16, y: 14}
-      tessellationDetail: 0
-      bones: []
-      spriteID: ddbbfab2e7f2acf48b469e426d1da212
-      internalID: 1836089745
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_38
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: 9, y: 16}
-        - {x: 9, y: 14}
-        - {x: 14, y: 14}
-        - {x: 14, y: 3}
-        - {x: 16, y: 3}
-      - - {x: -10, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: 14}
-        - {x: -10, y: 14}
-      tessellationDetail: 0
-      bones: []
-      spriteID: d237518cffbf28544aab220ca953c7e1
-      internalID: 57047496
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_39
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 128
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: 3}
-        - {x: -14, y: 3}
-        - {x: -14, y: 14}
-        - {x: 14, y: 14}
-        - {x: 14, y: 3}
-        - {x: 16, y: 3}
-      tessellationDetail: 0
-      bones: []
-      spriteID: dbd3efa9db6dc3e4aadeb208e2f82e76
-      internalID: -245090360
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_40
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 128
+        x: 32
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -1285,22 +1021,22 @@ TextureImporter:
         - {x: 16, y: 14}
         - {x: 16, y: 16}
         - {x: -16, y: 16}
-        - {x: -16, y: 3}
-        - {x: -14, y: 3}
+        - {x: -16, y: -16}
+        - {x: -14, y: -16}
       tessellationDetail: 0
       bones: []
-      spriteID: 9f238932cf906ed42a2121df7c15a7b3
-      internalID: 803386044
+      spriteID: ad2e0e1589d8a01408eee653074824ab
+      internalID: -1798129942
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_walls_temp_41
+      name: ship_walls_temp_32
       rect:
         serializedVersion: 2
-        x: 352
-        y: 128
+        x: 64
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -1308,21 +1044,59 @@ TextureImporter:
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: 5, y: 16}
+        - {x: 5, y: 14}
+        - {x: 15, y: 14}
+        - {x: 15, y: -16}
+        - {x: 16, y: -16}
+      - - {x: -13, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 14}
+        - {x: -13, y: 14}
       tessellationDetail: 0
       bones: []
-      spriteID: e6b2d06eddfe84544ac3d5927c55aab4
-      internalID: -1008797784
+      spriteID: 73726d156fc55074da234ae886f61503
+      internalID: 1773732172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_walls_temp_42
+      name: ship_walls_temp_33
       rect:
         serializedVersion: 2
-        x: 384
-        y: 128
+        x: 96
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -13, y: 14}
+        - {x: 16, y: 14}
+        - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: -13, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a76f32df9252404d9ab4df5da6c8788
+      internalID: 623032083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_34
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -1333,24 +1107,22 @@ TextureImporter:
       physicsShape:
       - - {x: 16, y: 16}
         - {x: -16, y: 16}
-        - {x: -16, y: 15}
-        - {x: 15, y: 15}
-        - {x: 15, y: -16}
-        - {x: 16, y: -16}
+        - {x: -16, y: 14}
+        - {x: 16, y: 14}
       tessellationDetail: 0
       bones: []
-      spriteID: bab91fb8a097aa347a32206b6bd6da2e
-      internalID: -765949512
+      spriteID: 546071e549307a44a9b741d211cbec8b
+      internalID: 597634462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_walls_temp_43
+      name: ship_walls_temp_35
       rect:
         serializedVersion: 2
-        x: 416
-        y: 128
+        x: 160
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -1361,12 +1133,234 @@ TextureImporter:
       physicsShape:
       - - {x: -9, y: 16}
         - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: -9, y: -16}
+        - {x: -16, y: 14}
+        - {x: -9, y: 14}
+      - - {x: 16, y: 16}
+        - {x: 10, y: 16}
+        - {x: 10, y: 14}
+        - {x: 16, y: 14}
       tessellationDetail: 0
       bones: []
-      spriteID: 3b013a45eda4c904a9edb450624f8d93
-      internalID: 892888389
+      spriteID: 4cdbb1d979ad5414d8f2550e743ec775
+      internalID: 255764677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_36
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 14}
+        - {x: 16, y: 14}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46e90dc5d065bf3479ef7a35fbefddfe
+      internalID: 1900444821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_37
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 14}
+        - {x: 16, y: 14}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b9f7e1fc979b14e8b6e0fcc2430ff8
+      internalID: -1948616059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_38
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 14}
+        - {x: -9, y: 14}
+      - - {x: 16, y: 16}
+        - {x: 10, y: 16}
+        - {x: 10, y: 14}
+        - {x: 16, y: 14}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 731ce61d18eee9a4cacf05b087048cfa
+      internalID: 1911850606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_39
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 2}
+        - {x: -12, y: 2}
+        - {x: -12, y: 14}
+        - {x: 15, y: 14}
+        - {x: 15, y: 2}
+        - {x: 16, y: 2}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e8aa70036a5211408fac3379d020435
+      internalID: -49026398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_40
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -13, y: 14}
+        - {x: 16, y: 14}
+        - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 2}
+        - {x: -13, y: 2}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2b9e1252223fa4408543e61d7c59265
+      internalID: 747676467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_41
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -14, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 14}
+        - {x: -14, y: 14}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8020ea4efc025434abfcd66647756b50
+      internalID: 535011513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_42
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 14}
+        - {x: 16, y: 14}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 813814d6db13f8042b5899ceb00953ea
+      internalID: -1230003492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_43
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6213d9c044bb07646a422a326a77aacb
+      internalID: 1949669010
       vertices: []
       indices: 
       edges: []
@@ -1376,7 +1370,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -1386,13 +1380,13 @@ TextureImporter:
       outline: []
       physicsShape:
       - - {x: 16, y: 16}
-        - {x: 9, y: 16}
-        - {x: 9, y: -16}
+        - {x: 10, y: 16}
+        - {x: 10, y: -16}
         - {x: 16, y: -16}
       tessellationDetail: 0
       bones: []
-      spriteID: c5d9dbce530e3d84f896906cc4560b24
-      internalID: -1794481394
+      spriteID: 694693deefc622f4bab4b844cddb9691
+      internalID: 395340435
       vertices: []
       indices: 
       edges: []
@@ -1402,7 +1396,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 96
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -1411,16 +1405,14 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: 16, y: -14}
-        - {x: -15, y: -14}
-        - {x: -15, y: 16}
+      - - {x: -14, y: 16}
         - {x: -16, y: 16}
         - {x: -16, y: -16}
-        - {x: 16, y: -16}
+        - {x: -14, y: -16}
       tessellationDetail: 0
       bones: []
-      spriteID: 66654d32961074c4791669fd5d6cb66d
-      internalID: 669090249
+      spriteID: 4890c87305e52cb4692dcccd6be6a67d
+      internalID: 1258004396
       vertices: []
       indices: 
       edges: []
@@ -1430,287 +1422,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: 14, y: 16}
-        - {x: 14, y: -14}
-        - {x: 4, y: -14}
-        - {x: 4, y: -16}
-        - {x: 16, y: -16}
-      - - {x: -14, y: -14}
-        - {x: -16, y: -14}
-        - {x: -16, y: -16}
-        - {x: -14, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: a534da1e8020fbd4b8816d40212aa612
-      internalID: 464583191
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_47
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: -14}
-        - {x: -14, y: -14}
-        - {x: -14, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9dd499dffbe33a64eb693d542bae60ce
-      internalID: -1024473746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_48
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: -14}
-        - {x: -16, y: -14}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4f409ada83fd95840be89ba58611d89c
-      internalID: -1276297980
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_49
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: -10, y: -14}
-        - {x: -16, y: -14}
-        - {x: -16, y: -16}
-        - {x: -10, y: -16}
-      - - {x: 16, y: -14}
-        - {x: 9, y: -14}
-        - {x: 9, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: a5dffaf51214ecb4fa45fbdaf5829026
-      internalID: -1639401337
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_50
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: -14}
-        - {x: -16, y: -14}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: dbba4d9570ec0874cada3adb0a382eed
-      internalID: 2054687106
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_51
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: -14}
-        - {x: -16, y: -14}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ebdfb93991bbc444b6767d5868b2441
-      internalID: -134217836
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_52
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: -3}
-        - {x: 14, y: -3}
-        - {x: 14, y: -14}
-        - {x: 9, y: -14}
-        - {x: 9, y: -16}
-        - {x: 16, y: -16}
-      - - {x: -10, y: -14}
-        - {x: -16, y: -14}
-        - {x: -16, y: -16}
-        - {x: -10, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7fe56b1032c566a48b227cebc9ea5270
-      internalID: -1556049044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_53
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: -3}
-        - {x: 14, y: -3}
-        - {x: 14, y: -14}
-        - {x: -14, y: -14}
-        - {x: -14, y: -3}
-        - {x: -16, y: -3}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81005acf59da62c4ca19315c045b290a
-      internalID: 870691169
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_54
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: -14}
-        - {x: -14, y: -14}
-        - {x: -14, y: -3}
-        - {x: -16, y: -3}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1524455068623e14b99a6c9b521f6b1a
-      internalID: 2034244945
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_55
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 495bb3bce7cc1df4cbd96381dcc7dae2
-      internalID: -627342981
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_56
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 96
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -1721,20 +1433,505 @@ TextureImporter:
       physicsShape:
       - - {x: 16, y: 16}
         - {x: 15, y: 16}
-        - {x: 15, y: -15}
-        - {x: -16, y: -15}
-        - {x: -16, y: -16}
+        - {x: 15, y: -16}
         - {x: 16, y: -16}
       tessellationDetail: 0
       bones: []
-      spriteID: 769ef9c6a66947d4fb16d75dfda40718
-      internalID: 1108346085
+      spriteID: 2a30982389bbb3045b5cb6eff3ac6c11
+      internalID: -346204932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_47
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -13, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: -13, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 531e6d885598e26468509034926f4998
+      internalID: -234555325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_48
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -12, y: -4}
+        - {x: -16, y: -4}
+        - {x: -16, y: -16}
+        - {x: -12, y: -16}
+      - - {x: 16, y: -4}
+        - {x: 15, y: -4}
+        - {x: 15, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c73f23c9fe3ce4bba315d666790a02
+      internalID: 395703136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_49
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -13, y: -4}
+        - {x: -16, y: -4}
+        - {x: -16, y: -16}
+        - {x: -13, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bcfb9d3554eea14aa62a384fa7d092d
+      internalID: 17854852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_50
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ded889eacd4b5049a5de3acf90ba09e
+      internalID: 1743157729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_51
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: 10, y: 16}
+        - {x: 10, y: 11}
+        - {x: 13, y: 8}
+        - {x: 16, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a7151f516c6ba46bda6d5bae41edb0
+      internalID: -637067131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_52
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: 10, y: 8}
+        - {x: 10, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 198d7cae2f87d2045bcb1e6fa4895e8d
+      internalID: 1224134932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_53
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -14, y: 12}
+        - {x: -13, y: 12}
+        - {x: -13, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: -14, y: -16}
+      - - {x: 16, y: 16}
+        - {x: 5, y: 16}
+        - {x: 5, y: 12}
+        - {x: 16, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a1c61dbf8fdb2642ac284fb507dd4d3
+      internalID: 994547851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_54
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 12}
+        - {x: 14, y: 12}
+        - {x: 14, y: 8}
+        - {x: 16, y: 8}
+      - - {x: 16, y: -10}
+        - {x: 14, y: -10}
+        - {x: 14, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff5d1a74a4dcb648a5a52e27b8720e1
+      internalID: -406908957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_55
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -14, y: 12}
+        - {x: 16, y: 12}
+        - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: -14, y: 8}
+      - - {x: -14, y: -10}
+        - {x: -16, y: -10}
+        - {x: -16, y: -16}
+        - {x: -14, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf062a011b7ecd64b9f5d895367719cd
+      internalID: 1363072554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_56
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 12}
+        - {x: -9, y: 12}
+      - - {x: 16, y: 16}
+        - {x: 10, y: 16}
+        - {x: 10, y: 12}
+        - {x: 16, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c046a5c4bc34564397a1428c60b46b6
+      internalID: 632760540
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: ship_walls_temp_57
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -12, y: 12}
+        - {x: 16, y: 12}
+        - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: -12, y: 8}
+      - - {x: -12, y: -10}
+        - {x: -16, y: -10}
+        - {x: -16, y: -16}
+        - {x: -12, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860af5b57fd00c748bf7b5ecf3a40e85
+      internalID: 1834048688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_58
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 12}
+        - {x: 16, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a697788b428de64890bd720f49c639f
+      internalID: -1019685526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_59
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -9, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 12}
+        - {x: -9, y: 12}
+      - - {x: 16, y: 16}
+        - {x: 10, y: 16}
+        - {x: 10, y: 12}
+        - {x: 16, y: 12}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e88b0948b7de154ba9b02a755a0f45d
+      internalID: -1967562870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_60
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 8}
+        - {x: 16, y: 8}
+        - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617b8becabfc6d3438a0b388f9992ac5
+      internalID: 293392116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_61
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: 10, y: 8}
+        - {x: 10, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6a435163ef2eb64c843c9b4df67caa0
+      internalID: -1833543954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_62
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -14, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: -14, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdbeb415050100e42baad7a664fd8b62
+      internalID: 1386832727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_63
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 8}
+        - {x: 16, y: 8}
+        - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bbc38d4ea775be4d88e95bdb082d5a9
+      internalID: 1751343481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_64
       rect:
         serializedVersion: 2
         x: 416
@@ -1747,239 +1944,15 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: -9, y: 16}
+      - - {x: -8, y: 11}
+        - {x: -8, y: 16}
         - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: -9, y: -16}
+        - {x: -16, y: 8}
+        - {x: -11, y: 8}
       tessellationDetail: 0
       bones: []
-      spriteID: c95d713c3a8d35241ba8c8ba24ef185d
-      internalID: -1067539000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_58
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: 9, y: 16}
-        - {x: 9, y: 13}
-        - {x: 12, y: 10}
-        - {x: 16, y: 10}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89d4c3e18e1878d49b0ab298675fefac
-      internalID: -1237124509
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_59
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: 10}
-        - {x: 9, y: 10}
-        - {x: 9, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0232d31d53c7d7f40948cd842ebfa930
-      internalID: 1836753135
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_60
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: -15}
-        - {x: -15, y: -15}
-        - {x: -15, y: 14}
-        - {x: -14, y: 14}
-        - {x: -14, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-      - - {x: 16, y: 16}
-        - {x: 4, y: 16}
-        - {x: 4, y: 14}
-        - {x: 16, y: 14}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0eb1db807270b754a8d160ffd672bc2a
-      internalID: 853939632
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_61
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: 14}
-        - {x: 14, y: 14}
-        - {x: 14, y: 9}
-        - {x: 16, y: 9}
-      - - {x: 16, y: -9}
-        - {x: 14, y: -9}
-        - {x: 14, y: -15}
-        - {x: -16, y: -15}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: f3d505c1b884bee4997bd9dcb3a1ac2b
-      internalID: -783403530
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_62
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: -14, y: 14}
-        - {x: 16, y: 14}
-        - {x: 16, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: 9}
-        - {x: -14, y: 9}
-      - - {x: -14, y: -9}
-        - {x: -16, y: -9}
-        - {x: -16, y: -16}
-        - {x: -14, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6505e71a0dfbd048a9693eaf0213f31
-      internalID: -998385297
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_63
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: 9, y: 16}
-        - {x: 9, y: 14}
-        - {x: 14, y: 14}
-        - {x: 14, y: 9}
-        - {x: 16, y: 9}
-      - - {x: -10, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: 14}
-        - {x: -10, y: 14}
-      - - {x: 16, y: -9}
-        - {x: 14, y: -9}
-        - {x: 14, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 240ed843a0beef74595e2149a4267271
-      internalID: 2063436811
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_64
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: -14, y: 14}
-        - {x: 16, y: 14}
-        - {x: 16, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: 9}
-        - {x: -14, y: 9}
-      - - {x: 16, y: -15}
-        - {x: -14, y: -15}
-        - {x: -14, y: -9}
-        - {x: -16, y: -9}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0f3fdd845a45976468caf10a5ddfb809
-      internalID: 8697342
+      spriteID: 08b93cda4eb3eb3488b67105af3afd76
+      internalID: -1217785834
       vertices: []
       indices: 
       edges: []
@@ -1988,533 +1961,8 @@ TextureImporter:
       name: ship_walls_temp_65
       rect:
         serializedVersion: 2
-        x: 224
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: 14}
-        - {x: 16, y: 14}
-      - - {x: 16, y: -15}
-        - {x: -16, y: -15}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e36fe24da9c1cd4fbdf39051f240d50
-      internalID: -1199370744
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_66
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: 9, y: 16}
-        - {x: 9, y: 14}
-        - {x: 14, y: 14}
-        - {x: 14, y: -15}
-        - {x: -16, y: -15}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-      - - {x: -10, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: 14}
-        - {x: -10, y: 14}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31bd83a9ab94bc746886719e0f9d2293
-      internalID: 1821238227
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_67
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: -10, y: 10}
-        - {x: 16, y: 10}
-        - {x: 16, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: -10, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 06d17960b54012948afd4486918c24a1
-      internalID: 668300274
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_68
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: 10}
-        - {x: 9, y: 10}
-        - {x: 9, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 48b7dd53e653cd944a68bfd58d6455dc
-      internalID: -384710938
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_69
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: e3ccd75f5414684498f9056cf393256c
-      internalID: 1188964233
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_70
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: -9, y: 9}
-        - {x: 16, y: 9}
-        - {x: 16, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: -9, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6bbbd9e974741e74bb0a67aea55ce9e4
-      internalID: 1689427676
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_71
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: -9, y: 12}
-        - {x: -9, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: 9}
-        - {x: -12, y: 9}
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2d33e8568f062242b60bf7a4a8eed0a
-      internalID: -1884307367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_72
-      rect:
-        serializedVersion: 2
         x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: 9, y: 16}
-        - {x: 9, y: 12}
-        - {x: 12, y: 9}
-        - {x: 16, y: 9}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d0e64f610565864d8827989fd5dab3b
-      internalID: 188671695
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_73
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: 9}
-        - {x: 16, y: 9}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a68c460a873cfd4e98238cb29485f08
-      internalID: -357110746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_74
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: 9}
-        - {x: 10, y: 9}
-        - {x: 10, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39c28658ab19eea4b858b49a308c0108
-      internalID: 1297591929
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_75
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: -15}
-        - {x: -14, y: -15}
-        - {x: -14, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: a15e96db48c1aa64a8d814562464c7a5
-      internalID: -657778426
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_76
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: 14, y: 16}
-        - {x: 14, y: -15}
-        - {x: -16, y: -15}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: b06c41c23b5c67d4b8108b1c1807412c
-      internalID: -1004741030
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_77
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: -10, y: 9}
-        - {x: 16, y: 9}
-        - {x: 16, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: -10, y: -16}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 80d6fc84a1bee624486e3f120363e716
-      internalID: 1470570182
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_78
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: 9}
-        - {x: 16, y: 9}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5928e35847fc8794dbaa9361aaa6c85d
-      internalID: -465344058
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_79
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: 9}
-        - {x: 16, y: 9}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 099b072ad163b8746b5ab30f6127f86e
-      internalID: 983769029
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_80
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: -10, y: 12}
-        - {x: -10, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: 9}
-        - {x: -13, y: 9}
-      tessellationDetail: 0
-      bones: []
-      spriteID: d40ddf921649da244ad510e35c4a1122
-      internalID: 1273144985
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_81
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: 9, y: 16}
-        - {x: 9, y: 12}
-        - {x: 12, y: 9}
-        - {x: 16, y: 9}
-      tessellationDetail: 0
-      bones: []
-      spriteID: e25023ef299b27740a62f65184c682d6
-      internalID: -1872041972
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_82
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: 9}
-        - {x: 16, y: 9}
-      tessellationDetail: 0
-      bones: []
-      spriteID: a5120a5729289f343b7b0e80b5c46fda
-      internalID: -88253748
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_83
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: -9, y: 12}
-        - {x: -9, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: 9}
-        - {x: -12, y: 9}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 28ab6bec439b70f458dc77d8d0bcdafe
-      internalID: 1131948474
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_84
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -2525,23 +1973,77 @@ TextureImporter:
       physicsShape:
       - - {x: 16, y: 16}
         - {x: 10, y: 16}
-        - {x: 10, y: 12}
-        - {x: 13, y: 9}
-        - {x: 16, y: 9}
+        - {x: 10, y: 11}
+        - {x: 13, y: 8}
+        - {x: 16, y: 8}
       tessellationDetail: 0
       bones: []
-      spriteID: c6f4b0ef0cb37264aa49f8f9ebbc0328
-      internalID: 146732368
+      spriteID: e1258d10d53212e4cb06eb419b6816c7
+      internalID: -256866562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_walls_temp_85
+      name: ship_walls_temp_66
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: 16, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a89f34f566957d4eb3f67dd10ff6f32
+      internalID: 33633586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_67
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: 10, y: 8}
+        - {x: 10, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae0612785f662224e8549da612a50482
+      internalID: -1229926080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_68
       rect:
         serializedVersion: 2
         x: 128
-        y: 0
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -2550,50 +2052,24 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: 16, y: 16}
+      - - {x: -14, y: 16}
         - {x: -16, y: 16}
-        - {x: -16, y: 9}
-        - {x: 16, y: 9}
+        - {x: -16, y: -16}
+        - {x: -14, y: -16}
       tessellationDetail: 0
       bones: []
-      spriteID: efb1ed847c549584babf8088b9a86952
-      internalID: 614080597
+      spriteID: e6bb8728428de9c4fb218c9140659e65
+      internalID: -1557288523
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ship_walls_temp_86
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape:
-      - - {x: 16, y: 16}
-        - {x: -16, y: 16}
-        - {x: -16, y: 9}
-        - {x: 16, y: 9}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89ae5d54460568f44af45182bab9fccf
-      internalID: -229620669
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ship_walls_temp_87
+      name: ship_walls_temp_69
       rect:
         serializedVersion: 2
         x: 192
-        y: 0
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -2602,15 +2078,281 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape:
-      - - {x: -10, y: 12}
-        - {x: -10, y: 16}
+      - - {x: -8, y: 8}
+        - {x: 16, y: 8}
+        - {x: 16, y: 16}
         - {x: -16, y: 16}
-        - {x: -16, y: 9}
-        - {x: -13, y: 9}
+        - {x: -16, y: -16}
+        - {x: -8, y: -16}
       tessellationDetail: 0
       bones: []
-      spriteID: ad2bed101d31e744ca77332569ab3809
-      internalID: 810873433
+      spriteID: 3318a39ccfcc9324ea838223dbd03e91
+      internalID: 1028903664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_70
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: 16, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f9b2a9996dd8b947bcf340ff137fd53
+      internalID: 2071650114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_71
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: 16, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e266c5214d549064da9a27078f55fb25
+      internalID: 27324595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_72
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 11}
+        - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: -11, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3653d176ddd55bd4dbe2477658dba766
+      internalID: -46482074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_73
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: 10, y: 16}
+        - {x: 10, y: 11}
+        - {x: 13, y: 8}
+        - {x: 16, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56f68038f6af9974392f96b47cdac7fd
+      internalID: -1189232410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_74
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: 16, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f28db5b3330314d8b483f7778c426d
+      internalID: -395089566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_75
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 11}
+        - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: -11, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc4e5341c06fa1409627e21e71c1ef6
+      internalID: 1476162056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_76
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: 10, y: 16}
+        - {x: 10, y: 11}
+        - {x: 13, y: 8}
+        - {x: 16, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b0d18d9f2911e44b91f8f30512e067
+      internalID: 1319811545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_77
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: 16, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ec43dc797a1594aa69845f41a302c5
+      internalID: 1795523868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_78
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: 16, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6036606c52257844688d34963afa881d
+      internalID: -1670303114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ship_walls_temp_79
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -8, y: 11}
+        - {x: -8, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: -11, y: 8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f3920f907536a545856072c16fed1cf
+      internalID: -240131360
       vertices: []
       indices: 
       edges: []
@@ -2632,93 +2374,85 @@ TextureImporter:
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       ship_walls_temp_0: -1165297296345255457
-      ship_walls_temp_1: 1162613802
-      ship_walls_temp_10: 900576988
-      ship_walls_temp_11: 1780681683
-      ship_walls_temp_12: 267408438
-      ship_walls_temp_13: 30170420
-      ship_walls_temp_14: -1784150528
-      ship_walls_temp_15: 1559833141
-      ship_walls_temp_16: -391948532
-      ship_walls_temp_17: 289407572
-      ship_walls_temp_18: 747246558
-      ship_walls_temp_19: 875216110
-      ship_walls_temp_2: -1678494729
-      ship_walls_temp_20: 1535375663
-      ship_walls_temp_21: 323953748
-      ship_walls_temp_22: -339911883
-      ship_walls_temp_23: -1506189720
-      ship_walls_temp_24: 1192767486
-      ship_walls_temp_25: -135610472
-      ship_walls_temp_26: -156322747
-      ship_walls_temp_27: 317041808
-      ship_walls_temp_28: 902896620
-      ship_walls_temp_29: 508323145
-      ship_walls_temp_3: -1431286393
-      ship_walls_temp_30: 22076717
-      ship_walls_temp_31: 997534189
-      ship_walls_temp_32: -181339727
-      ship_walls_temp_33: -1326164025
-      ship_walls_temp_34: -1293740971
-      ship_walls_temp_35: 2144267864
-      ship_walls_temp_36: 1701948668
-      ship_walls_temp_37: 1836089745
-      ship_walls_temp_38: 57047496
-      ship_walls_temp_39: -245090360
-      ship_walls_temp_4: 1335246070
-      ship_walls_temp_40: 803386044
-      ship_walls_temp_41: -1008797784
-      ship_walls_temp_42: -765949512
-      ship_walls_temp_43: 892888389
-      ship_walls_temp_44: -1794481394
-      ship_walls_temp_45: 669090249
-      ship_walls_temp_46: 464583191
-      ship_walls_temp_47: -1024473746
-      ship_walls_temp_48: -1276297980
-      ship_walls_temp_49: -1639401337
-      ship_walls_temp_5: -1122120564
-      ship_walls_temp_50: 2054687106
-      ship_walls_temp_51: -134217836
-      ship_walls_temp_52: -1556049044
-      ship_walls_temp_53: 870691169
-      ship_walls_temp_54: 2034244945
-      ship_walls_temp_55: -627342981
-      ship_walls_temp_56: 1108346085
-      ship_walls_temp_57: -1067539000
-      ship_walls_temp_58: -1237124509
-      ship_walls_temp_59: 1836753135
-      ship_walls_temp_6: -1906481096
-      ship_walls_temp_60: 853939632
-      ship_walls_temp_61: -783403530
-      ship_walls_temp_62: -998385297
-      ship_walls_temp_63: 2063436811
-      ship_walls_temp_64: 8697342
-      ship_walls_temp_65: -1199370744
-      ship_walls_temp_66: 1821238227
-      ship_walls_temp_67: 668300274
-      ship_walls_temp_68: -384710938
-      ship_walls_temp_69: 1188964233
-      ship_walls_temp_7: -1644722839
-      ship_walls_temp_70: 1689427676
-      ship_walls_temp_71: -1884307367
-      ship_walls_temp_72: 188671695
-      ship_walls_temp_73: -357110746
-      ship_walls_temp_74: 1297591929
-      ship_walls_temp_75: -657778426
-      ship_walls_temp_76: -1004741030
-      ship_walls_temp_77: 1470570182
-      ship_walls_temp_78: -465344058
-      ship_walls_temp_79: 983769029
-      ship_walls_temp_8: 1852889214
-      ship_walls_temp_80: 1273144985
-      ship_walls_temp_81: -1872041972
-      ship_walls_temp_82: -88253748
-      ship_walls_temp_83: 1131948474
-      ship_walls_temp_84: 146732368
-      ship_walls_temp_85: 614080597
-      ship_walls_temp_86: -229620669
-      ship_walls_temp_87: 810873433
-      ship_walls_temp_9: 57224990
+      ship_walls_temp_1: 346674136
+      ship_walls_temp_10: 1235218916
+      ship_walls_temp_11: 342833586
+      ship_walls_temp_12: -889066414
+      ship_walls_temp_13: 213613672
+      ship_walls_temp_14: -1801598576
+      ship_walls_temp_15: 530825065
+      ship_walls_temp_16: -1546000509
+      ship_walls_temp_17: 1753265740
+      ship_walls_temp_18: 1110538485
+      ship_walls_temp_19: -941587150
+      ship_walls_temp_2: -537442566
+      ship_walls_temp_20: 255966051
+      ship_walls_temp_21: 1722171876
+      ship_walls_temp_22: -616741039
+      ship_walls_temp_23: -1860275935
+      ship_walls_temp_24: -1358708508
+      ship_walls_temp_25: -980018011
+      ship_walls_temp_26: 1014459452
+      ship_walls_temp_27: -378278759
+      ship_walls_temp_28: -2044896694
+      ship_walls_temp_29: -513802532
+      ship_walls_temp_3: -2124104832
+      ship_walls_temp_30: -691734194
+      ship_walls_temp_31: -1798129942
+      ship_walls_temp_32: 1773732172
+      ship_walls_temp_33: 623032083
+      ship_walls_temp_34: 597634462
+      ship_walls_temp_35: 255764677
+      ship_walls_temp_36: 1900444821
+      ship_walls_temp_37: -1948616059
+      ship_walls_temp_38: 1911850606
+      ship_walls_temp_39: -49026398
+      ship_walls_temp_4: -1957870923
+      ship_walls_temp_40: 747676467
+      ship_walls_temp_41: 535011513
+      ship_walls_temp_42: -1230003492
+      ship_walls_temp_43: 1949669010
+      ship_walls_temp_44: 395340435
+      ship_walls_temp_45: 1258004396
+      ship_walls_temp_46: -346204932
+      ship_walls_temp_47: -234555325
+      ship_walls_temp_48: 395703136
+      ship_walls_temp_49: 17854852
+      ship_walls_temp_5: -474837507
+      ship_walls_temp_50: 1743157729
+      ship_walls_temp_51: -637067131
+      ship_walls_temp_52: 1224134932
+      ship_walls_temp_53: 994547851
+      ship_walls_temp_54: -406908957
+      ship_walls_temp_55: 1363072554
+      ship_walls_temp_56: 632760540
+      ship_walls_temp_57: 1834048688
+      ship_walls_temp_58: -1019685526
+      ship_walls_temp_59: -1967562870
+      ship_walls_temp_6: 1554668709
+      ship_walls_temp_60: 293392116
+      ship_walls_temp_61: -1833543954
+      ship_walls_temp_62: 1386832727
+      ship_walls_temp_63: 1751343481
+      ship_walls_temp_64: -1217785834
+      ship_walls_temp_65: -256866562
+      ship_walls_temp_66: 33633586
+      ship_walls_temp_67: -1229926080
+      ship_walls_temp_68: -1557288523
+      ship_walls_temp_69: 1028903664
+      ship_walls_temp_7: 1406507176
+      ship_walls_temp_70: 2071650114
+      ship_walls_temp_71: 27324595
+      ship_walls_temp_72: -46482074
+      ship_walls_temp_73: -1189232410
+      ship_walls_temp_74: -395089566
+      ship_walls_temp_75: 1476162056
+      ship_walls_temp_76: 1319811545
+      ship_walls_temp_77: 1795523868
+      ship_walls_temp_78: -1670303114
+      ship_walls_temp_79: -240131360
+      ship_walls_temp_8: 1878365092
+      ship_walls_temp_9: 1169035525
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
